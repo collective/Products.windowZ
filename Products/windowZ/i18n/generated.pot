@@ -1,0 +1,128 @@
+# ArchGenXML generated POT File
+# Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: windowZ\n"
+"POT-Creation-Date: Wed Mar 15 18:09:08 2006\n"
+"PO-Revision-Date: Wed Mar 15 18:09:08 2006\n"
+"Last-Translator: Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>\n"
+"Language-Team: Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: windowZ\n"
+
+#. Default: "Base URL provided as prefix for Window relative URLs. It's used only if the option Use Base URL? is checked."
+#: WindowZTool.py
+msgid "windowZ_help_base_url"
+msgstr ""
+
+#. Default: "Check this option if you want to have the content of the provided page indexed in the site catalog and available in the portal search box."
+#: content/Window.py
+msgid "windowZ_help_catalog_page_content"
+msgstr ""
+
+#. Default: "Check this option if you want to use show_window template to show sites provided via URL inside a window."
+#: WindowZTool.py
+msgid "windowZ_help_dynamic_window"
+msgstr ""
+
+#. Default: "Check this option if you want to hide the page metadata, like title, description, print and send page icons, author, etc."
+#: content/Window.py
+msgid "windowZ_help_hide_metadata"
+msgstr ""
+
+#. Default: "If there is a proxy in front of the server you should enter the HTTP proxy address. It may seems like http://proxy_address:port or http://username:password@proxy_address:port."
+#: WindowZTool.py
+msgid "windowZ_help_http_proxy"
+msgstr ""
+
+#. Default: "Enter a value for the page height. If it's not provided the page height will assumes the default value defined in the site setup. You may use %, px, em, etc."
+#: content/Window.py
+msgid "windowZ_help_page_height"
+msgstr ""
+
+#. Default: "Enter a value for the page width. If it's not provided the page width will assumes the default value defined in the site setup. You may use %, px, em, etc."
+#: content/Window.py
+msgid "windowZ_help_page_width"
+msgstr ""
+
+#. Default: "Check this option if you want to show the provided link as a reference in the bottom of the page."
+#: content/Window.py
+msgid "windowZ_help_show_reference"
+msgstr ""
+
+#. Default: "Check this option if you want to use the base URL defined in the site setup as a prefix to the provided link."
+#: content/Window.py
+msgid "windowZ_help_use_base_url"
+msgstr ""
+
+#. Default: "Base URL"
+#: WindowZTool.py
+msgid "windowZ_label_base_url"
+msgstr ""
+
+#. Default: "Catalog Page Content?"
+#: content/Window.py
+msgid "windowZ_label_catalog_page_content"
+msgstr ""
+
+#. Default: "Enable Dynamic Window"
+#: WindowZTool.py
+msgid "windowZ_label_dynamic_window"
+msgstr ""
+
+#. Default: "Hide Metadata?"
+#: content/Window.py
+msgid "windowZ_label_hide_metadata"
+msgstr ""
+
+#. Default: "HTTP Proxy"
+#: WindowZTool.py
+msgid "windowZ_label_http_proxy"
+msgstr ""
+
+#. Default: "Page Height"
+#: content/Window.py
+msgid "windowZ_label_page_height"
+msgstr ""
+
+#. Default: "Page Width"
+#: content/Window.py
+msgid "windowZ_label_page_width"
+msgstr ""
+
+#. Default: "Show Reference?"
+#: content/Window.py
+msgid "windowZ_label_show_reference"
+msgstr ""
+
+#. Default: "Use Base URL?"
+#: content/Window.py
+msgid "windowZ_label_use_base_url"
+msgstr ""
+
+#. Default: "Height of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
+#: WindowZTool.py
+msgid "windowZ_tool_help_page_height"
+msgstr ""
+
+#. Default: "Width of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
+#: WindowZTool.py
+msgid "windowZ_tool_help_page_width"
+msgstr ""
+
+#. Default: "Default Page Height"
+#: WindowZTool.py
+msgid "windowZ_tool_label_page_height"
+msgstr ""
+
+#. Default: "Default Page Width"
+#: WindowZTool.py
+msgid "windowZ_tool_label_page_width"
+msgstr ""
+

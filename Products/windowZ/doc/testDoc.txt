@@ -1,0 +1,32 @@
+This is a sample for a doctest file
+Here you can simply write python expressions
+and compare the output results like this:
+
+>>> i=1
+>>> print i
+1
+
+Lets import the necessary modules
+>>> from Products.windowZ import config
+
+>>> from Products.windowZ.interfaces.IWindow import IWindow
+>>> from Products.windowZ.content.Window import Window
+
+every line that starts with '>>>' will be interpreted
+as python statement.
+By writing the expected output after the python
+prompt lines you can compare that with the result
+from the above python statements. If the outputs
+differ you the test fails.
+
+You can also instanciate your classes that you want
+to test like this:
+
+>>> res=self.folder.invokeFactory('IWindow','myobj')
+>>> print self.folder.myobj.getId()
+myobj
+>>> res=self.folder.invokeFactory('Window','myobj')
+>>> print self.folder.myobj.getId()
+myobj
+
+Now you can continue with the further tests of your classes here

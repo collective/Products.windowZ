@@ -1,0 +1,18 @@
+windowZ TODO
+
+ * Improve some Plone 3.0 issues and behaviors
+
+ * Migrate the model from Poseidon to ArgoUML
+
+ * Provide a way to change page links (javascript yet implemented on
+   CMFDisplayPage) to open inside the iFrame, in the current browser or in a new
+   window
+
+ * Automatic resize of page height (it's very difficult because javascript cross
+   site scripting protection)
+
+ * Provide iFrame for portlets
+
+ * Show security icon in the browser bottom if the pointed page uses https
+
+ * More translations, yes, we need your help! ;-)

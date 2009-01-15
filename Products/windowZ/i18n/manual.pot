@@ -1,0 +1,23 @@
+# Gettext Message File for windowZ
+# Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: windowZ\n"
+"POT-Creation-Date: Mon Sep 11 17:44:34 2006\n"
+"PO-Revision-Date: Mon Sep 11 17:44:34 2006\n"
+"Last-Translator: Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>\n"
+"Language-Team: TcheZope.org <tchezope@yahoogroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: windowZ\n"
+
+#. Default: "This resource is not enabled in this portal."
+#: skins/windowZ/show_window.pt
+msgid "resource_not_enabled"
+msgstr ""
+

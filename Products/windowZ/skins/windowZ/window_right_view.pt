@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<metal:override fill-slot="column_two_slot" />
+
+<body>
+
+<div metal:fill-slot="main"
+     tal:define="hideMetadata here/getHide_metadata">
+    <tal:main-macro metal:use-macro="here/window_view/macros/main">
+      window_view
+    </tal:main-macro>
+</div>
+
+</body>
+</html>

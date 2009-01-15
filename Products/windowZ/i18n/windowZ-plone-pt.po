@@ -1,0 +1,55 @@
+# Gettext Message File for Plone
+# thegoldenaura (João Alves dos Santos) <thegoldenaura@gmail.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: windowZ\n"
+"POT-Creation-Date: Mon Sep 11 17:44:34 2006\n"
+"PO-Revision-Date: Wed Mar 17 01:22:34 2006\n"
+"Last-Translator: thegoldenaura (João Alves dos Santos) <thegoldenaura@gmail.com>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: pt\n"
+"Language-Name: Português\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: plone\n"
+
+msgid "A Window is a content type that shows one URL inside an iFrame in a page of the site."
+msgstr "Uma Janela é um tipo de conteúdo que mostra um URL dentro de um iFrame numa página do site."
+
+msgid "Both Columns Suppressed Window"
+msgstr "Janela sem Ambas as Colunas"
+
+msgid "Left Column Suppressed Window"
+msgstr "Janela sem a Coluna da Esquerda"
+
+msgid "Normal Window"
+msgstr "Janela Normal"
+
+msgid "Right Column Suppressed Window"
+msgstr "Janela sem a Coluna da Direita"
+
+msgid "Show Window"
+msgstr "Mostrar Janela"
+
+msgid "Window"
+msgstr "Janela"
+
+#. Default: "A Window is a content type that shows one URL inside an iFrame in a page of the site."
+#: content/Window.py
+msgid "description_edit_window"
+msgstr "Uma Janela é um tipo de conteúdo que mostra um URL dentro de um iFrame numa página do site."
+
+#. Default: "windowZ tool with general settings for Window content types."
+#: WindowZTool.py
+msgid "description_edit_windowztool"
+msgstr "Ferramenta do windowZ com configurações gerais para os conteúdos do tipo Janela."
+
+msgid "windowZ Settings"
+msgstr "Configurações do windowZ"
+
+msgid "windowZ Tool"
+msgstr "Ferramenta do windowZ"
+

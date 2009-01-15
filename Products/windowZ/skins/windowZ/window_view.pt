@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<div metal:fill-slot="main"
+     tal:define="hideMetadata here/getHide_metadata">
+    <tal:main-macro metal:define-macro="main">
+
+      <tal:block1 condition="not:hideMetadata">
+        <div metal:use-macro="here/document_actions/macros/document_actions">
+            Document actions (print, sendto etc)
+        </div>
+
+        <h1 tal:content="object_title" class="documentFirstHeading">
+            Title or id
+        </h1>
+
+        <div metal:use-macro="here/document_byline/macros/byline">
+            Get the byline - contains details about author and modification date.
+        </div>
+
+        <p class="documentDescription"
+           tal:content="here/Description"
+           tal:condition="here/Description">
+            Description
+        </p>
+      </tal:block1>
+
+        <iframe src="remote_url"
+                name="windowZ"
+                id="windowZ"
+                marginwidth="0"
+                marginheight="0"
+                width="100%"
+                height="500px"
+                frameborder="0"
+                tal:attributes="src here/remote_url;
+                                title object_title;
+                                width here/getPageWidth;
+                                height here/getPageHeight;">
+            <span i18n:translate="link_address">The link address is:</span>
+            <a href="#" tal:attributes="href here/remote_url"
+                        tal:content="here/remote_url">remote url</a>
+        </iframe>
+
+        <p tal:condition="here/getShow_reference">
+            <span i18n:translate="link_address">The link address is:</span>
+            <a href="#" tal:attributes="href here/remote_url"
+                        tal:content="here/remote_url">remote url</a>
+        </p>
+
+      <tal:block2 condition="not:hideMetadata">
+        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+            show related items if they exist
+        </div>
+      </tal:block2>
+    </tal:main-macro>
+</div>
+
+</body>
+</html>
