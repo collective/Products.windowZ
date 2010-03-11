@@ -32,6 +32,8 @@ from Products.Archetypes.atapi import *
 from Products.windowZ.interfaces.IWindow import IWindow
 from Products.windowZ.config import *
 
+import zope.interface
+
 # additional imports from tagged value 'import'
 from Products.ATContentTypes.content.link import ATLink
 from Products.ATContentTypes.content.link import ATLinkSchema
@@ -133,7 +135,7 @@ class Window(ATLink):
     in a page of the site.
     """
     security = ClassSecurityInfo()
-    __implements__ = (getattr(ATLink,'__implements__',()),) + (IWindow,)
+    zope.interface.implements(IWindow)
 
     # This name appears in the 'add' box
     archetype_name = 'Window'

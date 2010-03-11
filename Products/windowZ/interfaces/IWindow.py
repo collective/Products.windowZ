@@ -27,10 +27,9 @@
 __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
-from Interface import Base
+import zope.interface
 
-
-class IWindow(Base):
+class IWindow(zope.interface.Interface):
     """Window interface.
     """
 

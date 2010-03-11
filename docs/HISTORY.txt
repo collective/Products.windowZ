@@ -1,5 +1,16 @@
 windowZ HISTORY
 
+ 1.3-beta2
+ =========
+
+  * moved z2-Interface to z3-interface
+    [tom_gross]
+
+ 1.3-beta
+ ========
+
+  * Eggified product
+
  1.2.1 - 2008-06-03
  ==================
 
