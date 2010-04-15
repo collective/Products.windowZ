@@ -6,6 +6,9 @@ windowZ HISTORY
   * moved z2-Interface to z3-interface
     [tom_gross]
 
+  * fixed `window_view` to work with Plone 4.0
+    [tom_gross]
+
  1.3-beta
  ========
 

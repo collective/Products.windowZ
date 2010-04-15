@@ -10,17 +10,13 @@
     <tal:main-macro metal:define-macro="main">
 
       <tal:block1 condition="not:hideMetadata">
-        <div metal:use-macro="here/document_actions/macros/document_actions">
-            Document actions (print, sendto etc)
-        </div>
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
 
         <h1 tal:content="object_title" class="documentFirstHeading">
             Title or id
         </h1>
 
-        <div metal:use-macro="here/document_byline/macros/byline">
-            Get the byline - contains details about author and modification date.
-        </div>
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
 
         <p class="documentDescription"
            tal:content="here/Description"
@@ -38,7 +34,8 @@
                 height="500px"
                 frameborder="0"
                 tal:attributes="src here/remote_url;
-                                title object_title;
+                                context_state context/plone_context_state;
+                                title context_state/object_title;
                                 width here/getPageWidth;
                                 height here/getPageHeight;">
             <span i18n:translate="link_address">The link address is:</span>
