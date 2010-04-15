@@ -19,7 +19,7 @@ windowZ INSTALL
  Requirements
  ------------
 
-  * Plone 2.1+ or 2.5+ or 3.0+ (Early versions of Plone are not supported by
+  * Plone 3.0+ (Early versions of Plone are not supported by
     windowZ, but you can use CMFDisplayPage insted)
 
   * Archetypes + ATContentTypes
