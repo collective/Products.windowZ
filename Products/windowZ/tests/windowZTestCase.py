@@ -31,10 +31,6 @@ __docformat__ = 'plaintext'
 # Base TestCase for windowZ
 #
 
-import os, sys, code
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
-
 ##code-section module-header #fill in your manual code here
 ##/code-section module-header
 
@@ -118,8 +114,5 @@ def test_suite():
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-if __name__ == '__main__':
-    framework()
 
 

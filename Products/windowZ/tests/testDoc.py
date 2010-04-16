@@ -27,10 +27,6 @@
 __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
-import os, sys
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
-
 ##code-section module-header #fill in your manual code here
 ##/code-section module-header
 
@@ -70,14 +66,11 @@ def test_suite():
 
     return TestSuite((
         ZopeDocFileSuite('testDoc.txt',
-                         package='Products.windowZ.doc',
+                         package='Products.windowZ.tests',
                          test_class=testDoc),
     ))
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-if __name__ == '__main__':
-    framework()
 
 

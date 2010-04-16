@@ -27,10 +27,6 @@
 __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
-import os, sys
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
-
 ##code-section module-header #fill in your manual code here
 ##/code-section module-header
 
@@ -53,23 +49,19 @@ class testSetup(windowZTestCase):
 
     def test_tools(self):
         ids = self.portal.objectIds()
-        self.failUnless('archetype_tool' in ids)
-        # ['WindowZTool']
+        self.failUnless('portal_windowZ' in ids)
+
     def test_types(self):
         ids = self.portal.portal_types.objectIds()
-        self.failUnless('Document' in ids)
+        self.failUnless('Window' in ids)
 
     def test_skins(self):
         ids = self.portal.portal_skins.objectIds()
-        self.failUnless('plone_templates' in ids)
-
-    def test_workflows(self):
-        ids = self.portal.portal_workflow.objectIds()
-        self.failUnless('plone_workflow' in ids)
+        self.failUnless('windowZ' in ids)
 
     def test_workflowChains(self):
         getChain = self.portal.portal_workflow.getChainForPortalType
-        self.failUnless('plone_workflow' in getChain('Document'))
+        self.failUnless('simple_publication_workflow' in getChain('Window'))
 
     # Manually created methods
 
@@ -82,8 +74,4 @@ def test_suite():
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-if __name__ == '__main__':
-    framework()
-
 

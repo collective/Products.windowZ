@@ -48,7 +48,7 @@ except ImportError:
     CustomizationPolicy = None
 
 import os, os.path
-from Globals import package_home
+from App.Common import package_home
 from Products.CMFCore import utils as cmfutils
 
 try: # New CMF

@@ -27,6 +27,7 @@
 __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
+import transaction
 
 import os.path
 import sys
@@ -62,7 +63,7 @@ def install(self, reinstall=False):
     for dependency in DEPENDENCIES:
         print >> out, "Installing dependency %s:" % dependency
         quickinstaller.installProduct(dependency)
-        get_transaction().commit(1)
+        transaction.commit()
 
     classes = listTypes(PROJECTNAME)
     installTypes(self, out,

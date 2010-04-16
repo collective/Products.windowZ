@@ -31,42 +31,23 @@ __docformat__ = 'plaintext'
 # Interface tests
 #
 
-import os, sys
-if __name__ == '__main__':
-    execfile(os.path.join(sys.path[0], 'framework.py'))
+import unittest
 
-from Interface import Implements
-
-from Products.windowZ.tests.windowZTestCase import windowZTestCase
-
-
-from Interface.Verify import verifyClass
-
+from zope.interface.verify import verifyClass
 
 from Products.windowZ.content.Window import Window
-
 from Products.windowZ.interfaces.IWindow import IWindow
 
+class testInterfaces(unittest.TestCase):
 
-
-
-class testInterfaces(windowZTestCase):
-        
     def testInterfacesForWindow(self):
         '''test interface compliance for class Window'''
 
-        
-    
         self.failUnless(verifyClass(IWindow, Window))
-    
-        
+
 def test_suite():
     from unittest import TestSuite, makeSuite
     suite = TestSuite()
     suite.addTest(makeSuite(testInterfaces))
     return suite
-
-if __name__ == '__main__':
-    framework()
-
 

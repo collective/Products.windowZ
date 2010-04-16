@@ -22,9 +22,6 @@ differ you the test fails.
 You can also instanciate your classes that you want
 to test like this:
 
->>> res=self.folder.invokeFactory('IWindow','myobj')
->>> print self.folder.myobj.getId()
-myobj
 >>> res=self.folder.invokeFactory('Window','myobj')
 >>> print self.folder.myobj.getId()
 myobj
