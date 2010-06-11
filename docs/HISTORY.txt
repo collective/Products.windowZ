@@ -13,6 +13,9 @@ windowZ HISTORY
     from the URL of the content
     [tom_gross]
   
+  * use '_' to mark messagestrings in code
+    [tom_gross]
+
  1.3-beta
  ========
 
