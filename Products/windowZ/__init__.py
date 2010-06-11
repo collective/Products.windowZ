@@ -65,8 +65,9 @@ from config import *
 
 DirectoryView.registerDirectory('skins', product_globals)
 
-
 ##code-section custom-init-head #fill in your manual code here
+from zope.i18nmessageid import MessageFactory
+WindowZMessageFactory = MessageFactory('windowZ')
 ##/code-section custom-init-head
 
 

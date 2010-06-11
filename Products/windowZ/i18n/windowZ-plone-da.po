@@ -16,17 +16,26 @@ msgstr ""
 "Preferred-Encodings: latin1 utf-8\n"
 "Domain: plone\n"
 
-msgid "Window"
-msgstr "Window"
-
-msgid "windowZ Tool"
-msgstr "windowZ Tool"
-
-msgid "windowZ Settings"
-msgstr "Indstillinger for windowZ"
-
 msgid "A Window is a content type that shows one URL inside an iFrame in a page of the site."
 msgstr "Window er en indholdstype, som viser en URL inde i en iFrame på en side eller et site."
+
+msgid "Both Columns Suppressed Window"
+msgstr ""
+
+msgid "Left Column Suppressed Window"
+msgstr ""
+
+msgid "Normal Window"
+msgstr "Normal Window"
+
+msgid "Right Column Suppressed Window"
+msgstr ""
+
+msgid "Show Window"
+msgstr "Vis vindue"
+
+msgid "Window"
+msgstr "Window"
 
 #. Default: "A Window is a content type that shows one URL inside an iFrame in a page of the site."
 #: content/Window.py
@@ -38,18 +47,9 @@ msgstr ""
 msgid "description_edit_windowztool"
 msgstr "windowZ tool med generelle indstillinger for Window indholdstyper."
 
-msgid "Normal Window"
-msgstr "Normal Window"
+msgid "windowZ Settings"
+msgstr "Indstillinger for windowZ"
 
-msgid "LeColumn Suppressed Window"
-msgstr ""
-
-msgid "Right Column Suppressed Window"
-msgstr ""
-
-msgid "Both Columns Suppressed Window"
-msgstr ""
-
-msgid "Show Window"
-msgstr "Vis vindue"
+msgid "windowZ Tool"
+msgstr "windowZ Tool"
 

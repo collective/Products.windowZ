@@ -45,6 +45,7 @@ from Products.windowZ import permissions
 import urllib2
 from Products.CMFCore.utils import getToolByName
 from Products.windowZ.stripogram import html2text
+from Products.windowZ import WindowZMessageFactory as _
 ##/code-section module-header
 
 schema = Schema((
@@ -52,24 +53,24 @@ schema = Schema((
     StringField(
         name='page_width',
         widget=StringWidget(
-            label="Page Width",
-            description="Enter a value for the page width. If it's not provided the page width will assumes the default value defined in the site setup. You may use %, px, em, etc.",
+            label=_('windowZ_label_page_width', default="Page Width"),
+            description=_('windowZ_help_page_width', default=(
+                "Enter a value for the page width. If it's not provided "
+                "the page width will assumes the default value defined in "
+                "the site setup. You may use %, px, em, etc.")),
             size=10,
-            label_msgid='windowZ_label_page_width',
-            description_msgid='windowZ_help_page_width',
-            i18n_domain='windowZ',
         )
     ),
 
     StringField(
         name='page_height',
         widget=StringWidget(
-            label="Page Height",
-            description="Enter a value for the page height. If it's not provided the page height will assumes the default value defined in the site setup. You may use %, px, em, etc.",
+            label=_('windowZ_label_page_height', default="Page Height"),
+            description=_('windowZ_help_page_height', default=(
+                "Enter a value for the page height. If it's not provided the "
+                "page height will assumes the default value defined in the "
+                "site setup. You may use %, px, em, etc.")),
             size=10,
-            label_msgid='windowZ_label_page_height',
-            description_msgid='windowZ_help_page_height',
-            i18n_domain='windowZ',
         )
     ),
 
@@ -77,22 +78,21 @@ schema = Schema((
         name='hide_metadata',
         default=True,
         widget=BooleanWidget(
-            label="Hide Metadata?",
-            description="Check this option if you want to hide the page metadata, like title, description, print and send page icons, author, etc.",
-            label_msgid='windowZ_label_hide_metadata',
-            description_msgid='windowZ_help_hide_metadata',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_hide_metadata', default="Hide Metadata?"),
+            description=_('windowZ_help_hide_metadata', default=(
+                "Check this option if you want to hide the page metadata, "
+                "like title, description, print and send page icons, author, "
+                "etc.")),
         )
     ),
 
     BooleanField(
         name='use_base_url',
         widget=BooleanWidget(
-            label="Use Base URL?",
-            description="Check this option if you want to use the base URL defined in the site setup as a prefix to the provided link.",
-            label_msgid='windowZ_label_use_base_url',
-            description_msgid='windowZ_help_use_base_url',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_use_base_url', default="Use Base URL?"),
+            description=_('windowZ_help_use_base_url', default=(
+                "Check this option if you want to use the base URL defined in "
+                "the site setup as a prefix to the provided link.")),
         )
     ),
 
@@ -100,34 +100,33 @@ schema = Schema((
         name='catalog_page_content',
         default=True,
         widget=BooleanWidget(
-            label="Catalog Page Content?",
-            description="Check this option if you want to have the content of the provided page indexed in the site catalog and available in the portal search box.",
-            label_msgid='windowZ_label_catalog_page_content',
-            description_msgid='windowZ_help_catalog_page_content',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_catalog_page_content',
+                    default="Catalog Page Content?"),
+            description=_('windowZ_help_catalog_page_content', default=(
+                "Check this option if you want to have the content of the "
+                "provided page indexed in the site catalog and available "
+                "in the portal search box.")),
         )
     ),
 
     BooleanField(
         name='show_reference',
         widget=BooleanWidget(
-            label="Show Reference?",
-            description="Check this option if you want to show the provided link as a reference in the bottom of the page.",
-            label_msgid='windowZ_label_show_reference',
-            description_msgid='windowZ_help_show_reference',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_show_reference',
+                    default="Show Reference?"),
+            description=_('windowZ_help_show_reference', default=(
+                "Check this option if you want to show the provided link as "
+                "a reference in the bottom of the page.")),
         )
     ),
 
     BooleanField(
         name='inherit_protocol',
         widget=BooleanWidget(
-            label="Inherit Protocol?",
-            description=("Check this option if you want to inherit the "
-                         "URL-protocol for the iframe from the content URL "),
-            label_msgid='windowZ_label_inherit_protocol',
-            description_msgid='windowZ_help_inherit_protocol',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_inherit_protocol', "Inherit Protocol?"),
+            description=_('windowZ_help_inherit_protocol', default=(
+                "Check this option if you want to inherit the "
+                "URL-protocol for the iframe from the content URL ")),
         )
     ),
 ),

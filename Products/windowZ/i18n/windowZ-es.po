@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: windowZ\n"
-"POT-Creation-Date: 2007-08-23 03:31+0000\n"
+"POT-Creation-Date: 2010-06-11 14:14+0000\n"
 "PO-Revision-Date: Wed Mar 17 01:22:34 2006\n"
 "Last-Translator: thegoldenaura (João Alves dos Santos) <thegoldenaura@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Domain: windowZ\n"
 
 #. Default: "This resource is not enabled in this portal."
-#: skins/windowZ/show_window.pt
+#: ../skins/windowZ/show_window.pt:15
 msgid "resource_not_enabled"
 msgstr ""
 
@@ -26,8 +26,9 @@ msgstr ""
 msgid "windowZ_help_base_url"
 msgstr "URL base disponible como un prefijo para URLs relativos de la Ventana. Solamente utilizado si la opción Usar el URL Base? haya sido seleccionada."
 
-#. Default: "Check this option if you would like to have the content of the provided page indexed in the site catalog and available in the portal search box."
+#. Default: "Check this option if you want to have the content of the provided page indexed in the site catalog and available in the portal search box."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_catalog_page_content"
 msgstr "Seleccione esta opción si desea tener el contenido de la página indexado en el catálogo del site y disponible en la caja de búsquedas del portal. "
 
@@ -36,14 +37,20 @@ msgstr "Seleccione esta opción si desea tener el contenido de la página indexa
 msgid "windowZ_help_dynamic_window"
 msgstr ""
 
-#. Default: "Check this option if you would like to hide the page metadata, like title, description, print and send page icons, author, etc."
+#. Default: "Check this option if you want to hide the page metadata, like title, description, print and send page icons, author, etc."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_hide_metadata"
 msgstr "Seleccione esta opción si desea ocultar los metadados de la página, como el título, descripción, íconos de imprimir y enviar la página, autor, etc."
 
 #. Default: "If there is a proxy in front of the server you should enter the HTTP proxy address. It may seems like http://proxy_address:port or http://username:password@proxy_address:port."
 #: WindowZTool.py
 msgid "windowZ_help_http_proxy"
+msgstr ""
+
+#. Default: "Check this option if you want to inherit the URL-protocol for the iframe from the content URL "
+#: ../content/Window.py:127
+msgid "windowZ_help_inherit_protocol"
 msgstr ""
 
 #. Default: "Enter a value for the page height. If it's not provided the page height will assumes the default value defined in the site setup. You may use %, px, em, etc."
@@ -56,13 +63,15 @@ msgstr "Introduzca un valor para la altura de la página. Si este no es introduc
 msgid "windowZ_help_page_width"
 msgstr "Introduzca un valor para la anchura de la página. Si este no es introducido, la anchura de la página será el valor padrón, definido en las configuraciones del site. Puede usar %, px, em, etc."
 
-#. Default: "Check this option if you would like to show the provided link as a reference in the bottom of the page."
+#. Default: "Check this option if you want to show the provided link as a reference in the bottom of the page."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_show_reference"
 msgstr "Seleccione esta opción si desea enseñar el link fornecido, como una referencia en el rodapié de la página."
 
-#. Default: "Check this option if you would like to use the base URL defined in the site setup as a prefix to the provided link."
+#. Default: "Check this option if you want to use the base URL defined in the site setup as a prefix to the provided link."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_use_base_url"
 msgstr "Seleccione esta opción si desea usar el URL base definido en las configuraciones del site, como un prefijo para el link fornecido."
 
@@ -89,6 +98,11 @@ msgstr "Ocultar los Metadados?"
 #. Default: "HTTP Proxy"
 #: WindowZTool.py
 msgid "windowZ_label_http_proxy"
+msgstr ""
+
+#. Default: "Inherit Protocol?"
+#: ../content/Window.py:126
+msgid "windowZ_label_inherit_protocol"
 msgstr ""
 
 #. Default: "Page Height"

@@ -33,12 +33,10 @@ from Products.windowZ.config import *
 
 # additional imports from tagged value 'import'
 from Products.windowZ import permissions
-
-
 from Products.CMFCore.utils import UniqueObject
 
-    
 ##code-section module-header #fill in your manual code here
+from Products.windowZ import WindowZMessageFactory as _
 ##/code-section module-header
 
 schema = Schema((
@@ -47,12 +45,13 @@ schema = Schema((
         name='page_width',
         default="100%",
         widget=StringWidget(
-            label="Default Page Width",
+            label=_("windowZ_tool_label_page_width",
+                    default="Default Page Width"),
+            description=_("windowZ_tool_help_page_width", default(
+                "Width of the iFrame area. This is the default value for the "
+                "Window content types and may be redefined individually for "
+                "each Window content. You may use %, px, em, etc.")),
             size=10,
-            description="Width of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc.",
-            label_msgid="windowZ_tool_label_page_width",
-            description_msgid="windowZ_tool_help_page_width",
-            i18n_domain='windowZ',
         ),
         required=True
     ),
@@ -61,12 +60,13 @@ schema = Schema((
         name='page_height',
         default="500px",
         widget=StringWidget(
-            label="Default Page Height",
+            label=_("windowZ_tool_label_page_height",
+                    default="Default Page Height"),
+            description=_("windowZ_tool_help_page_height", default=(
+                "Height of the iFrame area. This is the default value for the "
+                "Window content types and may be redefined individually for "
+                "each Window content. You may use %, px, em, etc.")),
             size=10,
-            description="Height of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc.",
-            label_msgid="windowZ_tool_label_page_height",
-            description_msgid="windowZ_tool_help_page_height",
-            i18n_domain='windowZ',
         ),
         required=True
     ),
@@ -75,33 +75,33 @@ schema = Schema((
         name='base_url',
         default="http://",
         widget=StringWidget(
-            label="Base URL",
-            description="Base URL provided as prefix for Window relative URLs. It's used only if the option Use Base URL? is checked.",
-            label_msgid='windowZ_label_base_url',
-            description_msgid='windowZ_help_base_url',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_base_url', default="Base URL"),
+            description=_('windowZ_help_base_url', default=(
+                "Base URL provided as prefix for Window relative URLs. It's "
+                "used only if the option Use Base URL? is checked.")),
         )
     ),
 
     StringField(
         name='http_proxy',
         widget=StringWidget(
-            label="HTTP Proxy",
-            description="If there is a proxy in front of the server you should enter the HTTP proxy address. It may seems like http://proxy_address:port or http://username:password@proxy_address:port.",
-            label_msgid='windowZ_label_http_proxy',
-            description_msgid='windowZ_help_http_proxy',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_http_proxy', default="HTTP Proxy"),
+            description=_('windowZ_help_http_proxy', default=(
+                "If there is a proxy in front of the server you should enter "
+                "the HTTP proxy address. It may seems like "
+                "http://proxy_address:port or "
+                "http://username:password@proxy_address:port.")),
         )
     ),
 
     BooleanField(
         name='dynamic_window',
         widget=BooleanWidget(
-            label="Enable Dynamic Window",
-            description="Check this option if you want to use show_window template to show sites provided via URL inside a window.",
-            label_msgid='windowZ_label_dynamic_window',
-            description_msgid='windowZ_help_dynamic_window',
-            i18n_domain='windowZ',
+            label=_('windowZ_label_dynamic_window',
+                    default="Enable Dynamic Window"),
+            description=_('windowZ_help_dynamic_window', default=(
+                "Check this option if you want to use show_window template "
+                "to show sites provided via URL inside a window.")),
         )
     ),
 
@@ -111,8 +111,7 @@ schema = Schema((
 ##code-section after-local-schema #fill in your manual code here
 ##/code-section after-local-schema
 
-WindowZTool_schema = BaseSchema.copy() + \
-    schema.copy()
+WindowZTool_schema = BaseSchema.copy() + schema.copy()
 
 ##code-section after-schema #fill in your manual code here
 WindowZTool_schema['title'].required = 0

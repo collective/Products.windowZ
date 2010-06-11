@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: windowZ\n"
-"POT-Creation-Date: 2007-08-23 03:31+0000\n"
+"POT-Creation-Date: 2010-06-11 14:14+0000\n"
 "PO-Revision-Date: 2007-07-03 10:43+0200\n"
 "Last-Translator: Pierre-Yves Landuré <pierre-yves@landure.org>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
 #. Default: "This resource is not enabled in this portal."
-#: skins/windowZ/show_window.pt
+#: ../skins/windowZ/show_window.pt:15
 msgid "resource_not_enabled"
 msgstr ""
 
@@ -27,8 +27,9 @@ msgstr ""
 msgid "windowZ_help_base_url"
 msgstr "URL de base utilisée comme préfixe des URL relative des Fenêtres. Elle est utilisée seulement si l'option \"URL de base\" est cochée."
 
-#. Default: "Check this option if you would like to have the content of the provided page indexed in the site catalog and available in the portal search box."
+#. Default: "Check this option if you want to have the content of the provided page indexed in the site catalog and available in the portal search box."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_catalog_page_content"
 msgstr "Cochez cette option si vous souhaitez que le contenu de la page affichée dans la fenêtre soit indexée dans le catalogue du site, et donc disponible pour la recherche."
 
@@ -37,8 +38,9 @@ msgstr "Cochez cette option si vous souhaitez que le contenu de la page affiché
 msgid "windowZ_help_dynamic_window"
 msgstr ""
 
-#. Default: "Check this option if you would like to hide the page metadata, like title, description, print and send page icons, author, etc."
+#. Default: "Check this option if you want to hide the page metadata, like title, description, print and send page icons, author, etc."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_hide_metadata"
 msgstr "Cochez cette option si vous souhaitez masquer les données Meta de la page, comme le titre, la description, les icones d'impression et d'envoi par mél, l'auteur, etc."
 
@@ -46,6 +48,11 @@ msgstr "Cochez cette option si vous souhaitez masquer les données Meta de la pa
 #: WindowZTool.py
 msgid "windowZ_help_http_proxy"
 msgstr "Si le serveur Zope doit passer par un serveur mandataire pour accéder à Internet, vous devriez saisir l'adresse du serveur mandataire (Par exemple: http://adresse_serveur_mandataire:port ou à http://utilisateur:mot_de_passe@adresse_serveur_mandataire:port)."
+
+#. Default: "Check this option if you want to inherit the URL-protocol for the iframe from the content URL "
+#: ../content/Window.py:127
+msgid "windowZ_help_inherit_protocol"
+msgstr ""
 
 #. Default: "Enter a value for the page height. If it's not provided the page height will assumes the default value defined in the site setup. You may use %, px, em, etc."
 #: content/Window.py
@@ -57,13 +64,15 @@ msgstr "Saisissez la valeur de la hauteur de la fenêtre. Si elle n'est pas four
 msgid "windowZ_help_page_width"
 msgstr "Saisissez la valeur de la largeur de la fenêtre. Si elle n'est pas fournie, la largeur utilisée sera celle définie dans les paramètres globaux du site. Vous pouvez exprimer cette valeur en %, px, em, etc."
 
-#. Default: "Check this option if you would like to show the provided link as a reference in the bottom of the page."
+#. Default: "Check this option if you want to show the provided link as a reference in the bottom of the page."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_show_reference"
 msgstr "Cochez cette option si vous souhaitez afficher l'URL fournie comme référence en bas de la page."
 
-#. Default: "Check this option if you would like to use the base URL defined in the site setup as a prefix to the provided link."
+#. Default: "Check this option if you want to use the base URL defined in the site setup as a prefix to the provided link."
 #: content/Window.py
+#, fuzzy
 msgid "windowZ_help_use_base_url"
 msgstr "Cochez cette option si vous souhaitez utiliser l'URL de base définie dans les paramètres globaux du site comme préfixe au lien fourni."
 
@@ -91,6 +100,11 @@ msgstr "Masquer les données Meta ?"
 #: WindowZTool.py
 msgid "windowZ_label_http_proxy"
 msgstr "Serveur mandataire"
+
+#. Default: "Inherit Protocol?"
+#: ../content/Window.py:126
+msgid "windowZ_label_inherit_protocol"
+msgstr ""
 
 #. Default: "Page Height"
 #: content/Window.py
