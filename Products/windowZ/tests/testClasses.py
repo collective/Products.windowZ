@@ -53,7 +53,8 @@ class testClasses(windowZTestCase):
     ##/code-section class-header_testClasses
 
     def afterSetUp(self):
-        pass
+        self.folder.invokeFactory('Window', 'window')
+        self.window = self.folder['window']
 
     # from class Window:
     def test_SearchableText(self):
@@ -77,6 +78,34 @@ class testClasses(windowZTestCase):
 
     # Manually created methods
 
+    def test_iframeurl(self):
+        self.window.setRemoteUrl('http://www.plone.org/products')
+        self.assertEqual(self.window.getUse_base_url(), False)
+        self.assertEqual(self.window.remote_url(),
+                         'http://www.plone.org/products')
+
+    def test_iframeurl_with_base(self):
+        self.portal.portal_windowZ.setBase_url('ftp://')
+
+        self.window.setRemoteUrl('www.plone.org/products')
+        self.window.setUse_base_url(True)
+        self.assertEqual(self.window.remote_url(),
+                         'ftp://www.plone.org/products')
+
+    def test_iframeurl_inherit_protocol(self):
+        self.window.setRemoteUrl('http://www.plone.org/products')
+        self.window.setInherit_protocol(True)
+        self.assertEqual(self.window.getUse_base_url(), False)
+        self.assertEqual(self.window.remote_url(),
+                         'http://www.plone.org/products')
+
+    def test_iframeurl_inherit_protocol(self):
+        self.window.setRemoteUrl('http://www.plone.org/products')
+        self.window.setInherit_protocol(True)
+        self.app.REQUEST.set('SERVER_URL', 'https://nohost')
+        self.assertEqual(self.window.getUse_base_url(), False)
+        self.assertEqual(self.window.remote_url(),
+                         'https://www.plone.org/products')
 
 def test_suite():
     from unittest import TestSuite, makeSuite

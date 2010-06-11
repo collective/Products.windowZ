@@ -27,6 +27,8 @@
 __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
+import urlparse
+
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
 from Products.windowZ.interfaces.IWindow import IWindow
@@ -117,6 +119,17 @@ schema = Schema((
         )
     ),
 
+    BooleanField(
+        name='inherit_protocol',
+        widget=BooleanWidget(
+            label="Inherit Protocol?",
+            description=("Check this option if you want to inherit the "
+                         "URL-protocol for the iframe from the content URL "),
+            label_msgid='windowZ_label_inherit_protocol',
+            description_msgid='windowZ_help_inherit_protocol',
+            i18n_domain='windowZ',
+        )
+    ),
 ),
 )
 
@@ -259,8 +272,15 @@ class Window(ATLink):
         if self.getUse_base_url():
             portal_windowZ = getToolByName(self, 'portal_windowZ')
             base_url = portal_windowZ.getBase_url()
-            return "%s%s" % (base_url, self.getFrameUrl())
-        return self.getFrameUrl()
+            url = "%s%s" % (base_url, self.getFrameUrl())
+        else:
+            url = self.getFrameUrl()
+        if self.getInherit_protocol():
+            scheme = urlparse.urlsplit(self.REQUEST.get('SERVER_URL'))[0]
+            parts = list(urlparse.urlsplit(url))
+            parts[0] = scheme
+            url = urlparse.urlunsplit(parts)
+        return url
 
     security.declareProtected(permissions.View, 'getPageWidth')
     def getPageWidth(self):
