@@ -47,7 +47,7 @@ schema = Schema((
         widget=StringWidget(
             label=_("windowZ_tool_label_page_width",
                     default="Default Page Width"),
-            description=_("windowZ_tool_help_page_width", default(
+            description=_("windowZ_tool_help_page_width", default=(
                 "Width of the iFrame area. This is the default value for the "
                 "Window content types and may be redefined individually for "
                 "each Window content. You may use %, px, em, etc.")),
