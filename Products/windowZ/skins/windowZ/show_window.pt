@@ -29,8 +29,8 @@
                 height="500px"
                 frameborder="0"
                 tal:attributes="src remote_url;
-                                width here/portal_windowZ/getPage_width;
-                                height here/portal_windowZ/getPage_height;">
+                                width here/portal_windowz/getPage_width;
+                                height here/portal_windowz/getPage_height;">
             <span i18n:translate="link_address">The link address is:</span>
             <a href="#" tal:attributes="href remote_url"
                         tal:content="remote_url">remote url</a>

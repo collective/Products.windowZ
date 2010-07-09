@@ -3,7 +3,7 @@
 # File: testSetup.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -49,7 +49,7 @@ class testSetup(windowZTestCase):
 
     def test_tools(self):
         ids = self.portal.objectIds()
-        self.failUnless('portal_windowZ' in ids)
+        self.failUnless('portal_windowz' in ids)
 
     def test_types(self):
         ids = self.portal.portal_types.objectIds()

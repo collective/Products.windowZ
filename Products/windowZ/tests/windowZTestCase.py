@@ -3,7 +3,7 @@
 # File: windowZTestCase.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -36,35 +36,10 @@ __docformat__ = 'plaintext'
 
 from Testing import ZopeTestCase
 from Products.PloneTestCase import PloneTestCase
-from Products.windowZ.config import HAS_PLONE21
-from Products.windowZ.config import PRODUCT_DEPENDENCIES
-from Products.windowZ.config import DEPENDENCIES
-
-# Add common dependencies
-if not HAS_PLONE21:
-    DEPENDENCIES.append('Archetypes')
-    PRODUCT_DEPENDENCIES.append('MimetypesRegistry')
-    PRODUCT_DEPENDENCIES.append('PortalTransforms')
-PRODUCT_DEPENDENCIES.append('windowZ')
-
-# Install all (product-) dependencies, install them too
-for dependency in PRODUCT_DEPENDENCIES + DEPENDENCIES:
-    ZopeTestCase.installProduct(dependency)
-
 ZopeTestCase.installProduct('windowZ')
+PloneTestCase.setupPloneSite(products=('windowZ',))
 
-PRODUCTS = list()
-PRODUCTS += DEPENDENCIES
-PRODUCTS.append('windowZ')
-
-testcase = PloneTestCase.PloneTestCase
-
-##code-section module-before-plone-site-setup #fill in your manual code here
-##/code-section module-before-plone-site-setup
-
-PloneTestCase.setupPloneSite(products=PRODUCTS)
-
-class windowZTestCase(testcase):
+class windowZTestCase(PloneTestCase.PloneTestCase):
     """Base TestCase for windowZ."""
 
     ##code-section class-header_windowZTestCase #fill in your manual code here

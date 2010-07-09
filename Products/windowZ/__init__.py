@@ -42,22 +42,13 @@ import logging
 logger = logging.getLogger('windowZ')
 logger.info('Installing Product')
 
-try:
-    import CustomizationPolicy
-except ImportError:
-    CustomizationPolicy = None
-
 import os, os.path
 from App.Common import package_home
 from Products.CMFCore import utils as cmfutils
-
-try: # New CMF
-    from Products.CMFCore import permissions as CMFCorePermissions 
-except: # Old CMF
-    from Products.CMFCore import CMFCorePermissions
+from Products.CMFCore import permissions as CMFCorePermissions
 
 from Products.CMFCore import DirectoryView
-from Products.CMFPlone.utils import ToolInit
+from Products.CMFCore.utils import ToolInit
 from Products.Archetypes.atapi import *
 from Products.Archetypes import listTypes
 from Products.Archetypes.utils import capitalize
@@ -70,7 +61,6 @@ from zope.i18nmessageid import MessageFactory
 WindowZMessageFactory = MessageFactory('windowZ')
 ##/code-section custom-init-head
 
-
 def initialize(context):
     ##code-section custom-init-top #fill in your manual code here
     ##/code-section custom-init-top
@@ -82,9 +72,8 @@ def initialize(context):
     import WindowZTool
 
     # Initialize portal tools
-    tools = [WindowZTool.WindowZTool]
     ToolInit( PROJECTNAME +' Tools',
-                tools = tools,
+                tools = (WindowZTool.WindowZTool,),
                 icon='tool.gif'
                 ).initialize( context )
 
@@ -96,26 +85,7 @@ def initialize(context):
     cmfutils.ContentInit(
         PROJECTNAME + ' Content',
         content_types      = all_content_types,
-        permission         = DEFAULT_ADD_CONTENT_PERMISSION,
+        permission         = ADD_CONTENT_PERMISSION,
         extra_constructors = all_constructors,
         fti                = all_ftis,
         ).initialize(context)
-
-    # Give it some extra permissions to control them on a per class limit
-    for i in range(0,len(all_content_types)):
-        klassname=all_content_types[i].__name__
-        if not klassname in ADD_CONTENT_PERMISSIONS:
-            continue
-
-        context.registerClass(meta_type   = all_ftis[i]['meta_type'],
-                              constructors= (all_constructors[i],),
-                              permission  = ADD_CONTENT_PERMISSIONS[klassname])
-
-    # Apply customization-policy, if theres any
-    if CustomizationPolicy and hasattr(CustomizationPolicy, 'register'):
-        CustomizationPolicy.register(context)
-        print 'Customization policy for windowZ installed'
-
-    ##code-section custom-init-bottom #fill in your manual code here
-    ##/code-section custom-init-bottom
-

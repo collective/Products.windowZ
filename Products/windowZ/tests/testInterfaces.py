@@ -3,7 +3,7 @@
 # File: testInterfaces.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -36,7 +36,7 @@ import unittest
 from zope.interface.verify import verifyClass
 
 from Products.windowZ.content.Window import Window
-from Products.windowZ.interfaces.IWindow import IWindow
+from Products.windowZ.interfaces import IWindow
 
 class testInterfaces(unittest.TestCase):
 

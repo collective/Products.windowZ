@@ -3,7 +3,7 @@
 # File: Window.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -28,25 +28,22 @@ __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
 import urlparse
+import urllib2
 
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
-from Products.windowZ.interfaces.IWindow import IWindow
-from Products.windowZ.config import *
+from Products.windowZ.interfaces import IWindow
+from Products.windowZ.config import PROJECTNAME
 
 import zope.interface
 
-# additional imports from tagged value 'import'
 from Products.ATContentTypes.content.link import ATLink
 from Products.ATContentTypes.content.link import ATLinkSchema
 from Products.windowZ import permissions
 
-##code-section module-header #fill in your manual code here
-import urllib2
 from Products.CMFCore.utils import getToolByName
 from Products.windowZ.stripogram import html2text
 from Products.windowZ import WindowZMessageFactory as _
-##/code-section module-header
 
 schema = Schema((
 
@@ -238,10 +235,10 @@ class Window(ATLink):
 
     security.declareProtected(permissions.View, 'getProxies')
     def getProxies(self):
-        """Open proxy HTTP connection if it was setting on portal_windowZ tool.
+        """Open proxy HTTP connection if it was setting on portal_windowz tool.
         """
-        portal_windowZ = getToolByName(self, 'portal_windowZ')
-        http_proxy = portal_windowZ.getHttp_proxy()
+        portal_windowz = getToolByName(self, 'portal_windowz')
+        http_proxy = portal_windowz.getHttp_proxy()
         if http_proxy:
             try:
                 proxies = {'http': http_proxy}
@@ -253,14 +250,14 @@ class Window(ATLink):
 
     security.declareProtected(permissions.View, 'getPageHeight')
     def getPageHeight(self):
-        """Returns page_height or the default value from portal_windowZ.
+        """Returns page_height or the default value from portal_windowz.
         """
         if self.getPage_height():
             return self.getPage_height()
         else:
-            portal_windowZ = getToolByName(self, 'portal_windowZ')
-            if portal_windowZ.getPage_height():
-                return portal_windowZ.getPage_height()
+            portal_windowz = getToolByName(self, 'portal_windowz')
+            if portal_windowz.getPage_height():
+                return portal_windowz.getPage_height()
         return '500px'
 
     security.declareProtected(permissions.View, 'remote_url')
@@ -269,8 +266,8 @@ class Window(ATLink):
         base_url if it's selected by user.
         """
         if self.getUse_base_url():
-            portal_windowZ = getToolByName(self, 'portal_windowZ')
-            base_url = portal_windowZ.getBase_url()
+            portal_windowz = getToolByName(self, 'portal_windowz')
+            base_url = portal_windowz.getBase_url()
             url = "%s%s" % (base_url, self.getFrameUrl())
         else:
             url = self.getFrameUrl()
@@ -283,17 +280,15 @@ class Window(ATLink):
 
     security.declareProtected(permissions.View, 'getPageWidth')
     def getPageWidth(self):
-        """Returns page_width or the default value from portal_windowZ.
+        """Returns page_width or the default value from portal_windowz.
         """
         if self.getPage_width():
             return self.getPage_width()
         else:
-            portal_windowZ = getToolByName(self, 'portal_windowZ')
-            if portal_windowZ.getPage_width():
-                return portal_windowZ.getPage_width()
+            portal_windowz = getToolByName(self, 'portal_windowz')
+            if portal_windowz.getPage_width():
+                return portal_windowz.getPage_width()
         return '100%'
-
-    # Manually created methods
 
     security.declarePrivate('_processPageBody')
     def _processPageBody(self, page_body):
@@ -308,13 +303,7 @@ class Window(ATLink):
         """Plone 2.5 bug fix."""
         return False
 
-
-
 registerType(Window, PROJECTNAME)
-# end of class Window
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer
 
 
 
