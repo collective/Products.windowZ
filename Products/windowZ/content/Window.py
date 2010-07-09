@@ -42,7 +42,7 @@ from Products.ATContentTypes.content.link import ATLinkSchema
 from Products.windowZ import permissions
 
 from Products.CMFCore.utils import getToolByName
-from Products.windowZ.stripogram import html2text
+from stripogram import html2text
 from Products.windowZ import WindowZMessageFactory as _
 
 schema = Schema((
