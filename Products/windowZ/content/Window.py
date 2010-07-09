@@ -30,19 +30,20 @@ __docformat__ = 'plaintext'
 import urlparse
 import urllib2
 
-from AccessControl import ClassSecurityInfo
-from Products.Archetypes.atapi import *
-from Products.windowZ.interfaces import IWindow
-from Products.windowZ.config import PROJECTNAME
+from stripogram import html2text
 
 import zope.interface
+from AccessControl import ClassSecurityInfo
 
+from Products.Archetypes.atapi import *
 from Products.ATContentTypes.content.link import ATLink
 from Products.ATContentTypes.content.link import ATLinkSchema
-from Products.windowZ import permissions
 
+from Products.CMFCore.permissions import View
 from Products.CMFCore.utils import getToolByName
-from stripogram import html2text
+
+from Products.windowZ.interfaces import IWindow
+from Products.windowZ.config import PROJECTNAME
 from Products.windowZ import WindowZMessageFactory as _
 
 schema = Schema((
@@ -146,73 +147,12 @@ class Window(ATLink):
     security = ClassSecurityInfo()
     zope.interface.implements(IWindow)
 
-    # This name appears in the 'add' box
-    archetype_name = 'Window'
-
     meta_type = 'Window'
-    portal_type = 'Window'
-    allowed_content_types = []
-    filter_content_types = 0
-    global_allow = 1
-    content_icon = 'window_icon.gif'
-    immediate_view = 'window_view'
-    default_view = 'window_view'
-    suppl_views = ('window_left_view', 'window_right_view', 'window_both_view')
-    typeDescription = "A Window is a content type that shows one URL inside an iFrame in a page of the site."
-    typeDescMsgId = 'description_edit_window'
-
-
-    actions =  (
-
-
-       {'action': "string:${object_url}",
-        'category': "object",
-        'id': 'view',
-        'name': 'View',
-        'permissions': (permissions.View,),
-        'condition': 'python:1'
-       },
-
-
-       {'action': "string:${object_url}/edit",
-        'category': "object",
-        'id': 'edit',
-        'name': 'Edit',
-        'permissions': (permissions.Modify,),
-        'condition': 'python:1'
-       },
-
-
-       {'action': "string:${object_url}/properties",
-        'category': "object",
-        'id': 'metadata',
-        'name': 'Properties',
-        'permissions': (permissions.Modify,),
-        'condition': 'python:1'
-       },
-
-
-       {'action': "string:${object_url}/sharing",
-        'category': "object",
-        'id': 'local_roles',
-        'name': 'Sharing',
-        'permissions': (permissions.ManageProperties,),
-        'condition': 'python:1'
-       },
-
-
-    )
-
     _at_rename_after_creation = True
 
     schema = Window_schema
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
-
-    # Methods
-
-    security.declareProtected(permissions.View, 'SearchableText')
+    security.declareProtected(View, 'SearchableText')
     def SearchableText(self):
         """Format the title, description and the provided page's content to
         be cataloged by portal_catalog, if user checked
@@ -233,7 +173,7 @@ class Window(ATLink):
 
     # Methods from Interface IWindow
 
-    security.declareProtected(permissions.View, 'getProxies')
+    security.declareProtected(View, 'getProxies')
     def getProxies(self):
         """Open proxy HTTP connection if it was setting on portal_windowz tool.
         """
@@ -248,7 +188,7 @@ class Window(ATLink):
             except:
                 pass
 
-    security.declareProtected(permissions.View, 'getPageHeight')
+    security.declareProtected(View, 'getPageHeight')
     def getPageHeight(self):
         """Returns page_height or the default value from portal_windowz.
         """
@@ -260,7 +200,7 @@ class Window(ATLink):
                 return portal_windowz.getPage_height()
         return '500px'
 
-    security.declareProtected(permissions.View, 'remote_url')
+    security.declareProtected(View, 'remote_url')
     def remote_url(self):
         """Returns the Window URL through getFrameUrl method prefixed with
         base_url if it's selected by user.
@@ -278,7 +218,7 @@ class Window(ATLink):
             url = urlparse.urlunsplit(parts)
         return url
 
-    security.declareProtected(permissions.View, 'getPageWidth')
+    security.declareProtected(View, 'getPageWidth')
     def getPageWidth(self):
         """Returns page_width or the default value from portal_windowz.
         """
