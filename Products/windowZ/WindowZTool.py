@@ -31,7 +31,7 @@ from zope.interface import implements, classProvides
 from zope.schema.fieldproperty import FieldProperty
 from AccessControl import ClassSecurityInfo
 from OFS.SimpleItem import SimpleItem
-from Globals import InitializeClass
+from App.class_init import InitializeClass
 
 from Products.CMFCore.utils import UniqueObject
 

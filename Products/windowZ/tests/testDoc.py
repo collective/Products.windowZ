@@ -38,7 +38,7 @@ from Testing import ZopeTestCase
 from Products.windowZ.tests.windowZTestCase import windowZTestCase
 
 # Import the tested classes
-from Products.windowZ.interfaces.IWindow import IWindow
+from Products.windowZ.interfaces import IWindow
 from Products.windowZ.content.Window import Window
 
 
