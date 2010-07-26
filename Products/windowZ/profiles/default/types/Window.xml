@@ -7,12 +7,9 @@
     name="description">A Window is a content type that shows one URL inside an iFrame
       in a page of the site.
       </property>
- <property name="icon_expr"></property>
  <property name="content_meta_type">Window</property>
  <property name="product">windowZ</property>
  <property name="factory">addWindow</property>
- <property name="add_view_expr"></property>
- <property name="link_target"></property>
  <property name="immediate_view">window_view</property>
  <property name="global_allow">True</property>
  <property name="filter_content_types">False</property>
