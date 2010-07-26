@@ -75,7 +75,8 @@ class IWindowZSettings(zope.interface.Interface):
                 "Window content types and may be redefined individually for "
                 "each Window content. You may use %, px, em, etc.")),
         required=True,
-        default=u"100%")
+        default=u"100%"
+        )
 
     page_height = TextLine(
         title=_("windowZ_tool_label_page_height",
@@ -84,7 +85,8 @@ class IWindowZSettings(zope.interface.Interface):
                 "Height of the iFrame area. This is the default value for the "
                 "Window content types and may be redefined individually for "
                 "each Window content. You may use %, px, em, etc.")),
-        required=True)
+        required=False
+        )
 
 
     base_url = TextLine(
@@ -92,7 +94,9 @@ class IWindowZSettings(zope.interface.Interface):
         description=_('windowZ_help_base_url', default=(
                 "Base URL provided as prefix for Window relative URLs. It's "
                 "used only if the option Use Base URL? is checked.")),
-        default=u"http://")
+        required=False,
+        default=u"http://",
+        )
 
 
     http_proxy = TextLine(
@@ -102,6 +106,7 @@ class IWindowZSettings(zope.interface.Interface):
                 "the HTTP proxy address. It may seems like "
                 "http://proxy_address:port or "
                 "http://username:password@proxy_address:port.")),
+        required=False,
         )
 
     dynamic_window = Bool(
