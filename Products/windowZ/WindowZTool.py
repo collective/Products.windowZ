@@ -3,7 +3,7 @@
 # File: WindowZTool.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -27,174 +27,65 @@
 __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
+from zope.interface import implements, classProvides
+from zope.schema.fieldproperty import FieldProperty
 from AccessControl import ClassSecurityInfo
-from Products.Archetypes.atapi import *
-from Products.windowZ.config import *
+from OFS.SimpleItem import SimpleItem
+from App.class_init import InitializeClass
 
-# additional imports from tagged value 'import'
-from Products.windowZ import permissions
 from Products.CMFCore.utils import UniqueObject
 
-##code-section module-header #fill in your manual code here
-from Products.windowZ import WindowZMessageFactory as _
-##/code-section module-header
+from Products.windowZ.interfaces import IWindowZTool, IWindowZSettings
 
-schema = Schema((
-
-    StringField(
-        name='page_width',
-        default="100%",
-        widget=StringWidget(
-            label=_("windowZ_tool_label_page_width",
-                    default="Default Page Width"),
-            description=_("windowZ_tool_help_page_width", default=(
-                "Width of the iFrame area. This is the default value for the "
-                "Window content types and may be redefined individually for "
-                "each Window content. You may use %, px, em, etc.")),
-            size=10,
-        ),
-        required=True
-    ),
-
-    StringField(
-        name='page_height',
-        default="500px",
-        widget=StringWidget(
-            label=_("windowZ_tool_label_page_height",
-                    default="Default Page Height"),
-            description=_("windowZ_tool_help_page_height", default=(
-                "Height of the iFrame area. This is the default value for the "
-                "Window content types and may be redefined individually for "
-                "each Window content. You may use %, px, em, etc.")),
-            size=10,
-        ),
-        required=True
-    ),
-
-    StringField(
-        name='base_url',
-        default="http://",
-        widget=StringWidget(
-            label=_('windowZ_label_base_url', default="Base URL"),
-            description=_('windowZ_help_base_url', default=(
-                "Base URL provided as prefix for Window relative URLs. It's "
-                "used only if the option Use Base URL? is checked.")),
-        )
-    ),
-
-    StringField(
-        name='http_proxy',
-        widget=StringWidget(
-            label=_('windowZ_label_http_proxy', default="HTTP Proxy"),
-            description=_('windowZ_help_http_proxy', default=(
-                "If there is a proxy in front of the server you should enter "
-                "the HTTP proxy address. It may seems like "
-                "http://proxy_address:port or "
-                "http://username:password@proxy_address:port.")),
-        )
-    ),
-
-    BooleanField(
-        name='dynamic_window',
-        widget=BooleanWidget(
-            label=_('windowZ_label_dynamic_window',
-                    default="Enable Dynamic Window"),
-            description=_('windowZ_help_dynamic_window', default=(
-                "Check this option if you want to use show_window template "
-                "to show sites provided via URL inside a window.")),
-        )
-    ),
-
-),
-)
-
-##code-section after-local-schema #fill in your manual code here
-##/code-section after-local-schema
-
-WindowZTool_schema = BaseSchema.copy() + schema.copy()
-
-##code-section after-schema #fill in your manual code here
-WindowZTool_schema['title'].required = 0
-WindowZTool_schema['title'].widget.visible = {'view':'invisible','edit':'invisible'}
-##/code-section after-schema
-
-class WindowZTool(UniqueObject, BaseContent):
+class WindowZTool(UniqueObject, SimpleItem):
     """The windowZ tool. A singleton object that provides functionality
     to Window objects. The fixed id is portal_windowZ.
     """
+
+    implements(IWindowZTool, IWindowZSettings)
+
+    id = 'portal_windowz'
+    title = 'windowZ Tool'
+    meta_type= 'WindowZTool'
+    plone_tool = True
     security = ClassSecurityInfo()
-    __implements__ = (getattr(UniqueObject,'__implements__',()),) + (getattr(BaseContent,'__implements__',()),)
 
-    # This name appears in the 'add' box
-    archetype_name = 'windowZ Tool'
+    page_width = FieldProperty(IWindowZSettings['page_width'])
+    page_height = FieldProperty(IWindowZSettings['page_height'])
+    base_url = FieldProperty(IWindowZSettings['base_url'])
+    http_proxy = FieldProperty(IWindowZSettings['http_proxy'])
+    dynamic_window = FieldProperty(IWindowZSettings['dynamic_window'])
 
-    meta_type = 'WindowZTool'
-    portal_type = 'WindowZTool'
-    allowed_content_types = []
-    filter_content_types = 0
-    global_allow = 0
-    content_icon = 'window_icon.gif'
-    immediate_view = 'edit'
-    default_view = 'edit'
-    suppl_views = ()
-    typeDescription = "windowZ tool with general settings for Window content types."
-    typeDescMsgId = 'description_edit_windowztool'
-    toolicon = 'tool.gif'
+    # BBB methods from old Archetype content tool
+    def getPage_width(self):
+        return self.page_width
 
+    def getPage_height(self):
+        return self.page_height
 
-    actions =  (
+    def getBase_url(self):
+        return self.base_url
 
+    def getHttp_proxy(self):
+        return self.http_proxy
 
-       {'action': "string:${object_url}/edit",
-        'category': "object",
-        'id': 'edit',
-        'name': 'Edit',
-        'permissions': (permissions.ManagePortal,),
-        'condition': 'python:1'
-       },
+    def getDynamic_window(self):
+        return self.dynamic_window
 
+    # setter
+    def setPage_width(self, value):
+        self.page_width = value
 
-    )
+    def setPage_height(self, value):
+        self.page_height = value
 
-    _at_rename_after_creation = True
+    def setBase_url(self, value):
+        self.base_url = value
 
-    schema = WindowZTool_schema
+    def setHttp_proxy(self, value):
+        self.http_proxy = value
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
+    def setDynamic_window(self, value):
+        self.dynamic_window = value
 
-
-    # tool-constructors have no id argument, the id is fixed
-    def __init__(self, id=None):
-        BaseContent.__init__(self,'portal_windowZ')
-        self.setTitle('windowZ Tool')
-        
-        ##code-section constructor-footer #fill in your manual code here
-        ##/code-section constructor-footer
-
-
-    # tool should not appear in portal_catalog
-    def at_post_edit_script(self):
-        self.unindexObject()
-        
-        ##code-section post-edit-method-footer #fill in your manual code here
-        ##/code-section post-edit-method-footer
-
-
-    # Methods
-
-def modify_fti(fti):
-    # Hide unnecessary tabs (usability enhancement)
-    for a in fti['actions']:
-        if a['id'] in ['view', 'metadata', 'sharing']:
-            a['visible'] = 0
-    return fti
-
-registerType(WindowZTool, PROJECTNAME)
-# end of class WindowZTool
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer
-
-
-
+InitializeClass(WindowZTool)

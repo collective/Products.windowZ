@@ -35,6 +35,7 @@ setup(name='Products.windowZ',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'stripogram',
       ],
       entry_points="""
       # -*- Entry points: -*-

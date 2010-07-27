@@ -3,7 +3,7 @@
 # File: testClasses.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -85,7 +85,7 @@ class testClasses(windowZTestCase):
                          'http://www.plone.org/products')
 
     def test_iframeurl_with_base(self):
-        self.portal.portal_windowZ.setBase_url('ftp://')
+        self.portal.portal_windowz.setBase_url(u'ftp://')
 
         self.window.setRemoteUrl('www.plone.org/products')
         self.window.setUse_base_url(True)

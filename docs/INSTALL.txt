@@ -22,34 +22,3 @@ windowZ INSTALL
   * Plone 3.0+ (Early versions of Plone are not supported by
     windowZ, but you can use CMFDisplayPage insted)
 
-  * Archetypes + ATContentTypes
-
-
- Migration
- ---------
-
-  * If you are upgrading windowZ from old versions please remove windowZ from
-    Products directory and unpack the new one package. Then restart Zope and go
-    to portal_quickinstaller, select windowZ and click 'Reinstall' button.
-
-
- Migration from CMFDisplayPage
- -----------------------------
-
-  1) Don't uninstall CMFDisplayPage before run migrations
-
-  2) Install windowZ
-
-  3) Create an External Method in the Plone site root with parameters:
-
-   - Id: migrateCMFDisplayPage
-
-   - Title: Migrate CMFDisplayPage to windowZ
-
-   - Module Name: windowZ.Migrations
-
-   - Function Name: CMFDisplayPage2windowZ
-
-  4) Save it and click 'Test' tab
-
-  5) Uninstall CMFDisplayPage at portal_quickinstaller tool and it's done!
