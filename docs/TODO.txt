@@ -1,7 +1,5 @@
 windowZ TODO
 
- * Improve some Plone 3.0 issues and behaviors
-
  * Migrate the model from Poseidon to ArgoUML
 
  * Provide a way to change page links (javascript yet implemented on

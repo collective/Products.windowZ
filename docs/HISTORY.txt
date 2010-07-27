@@ -1,19 +1,18 @@
 windowZ HISTORY
 
- 1.3-beta2
- =========
+ 1.3-beta2 - 2010-07-27
+ ======================
 
   * moved z2-Interface to z3-interface
-    [tom_gross]
-
   * fixed `window_view` to work with Plone 4.0
-    [tom_gross]
-
   * added inherit_protocol flag, which allows to inherit the protocol schema
-    from the URL of the content
-    [tom_gross]
-  
   * use '_' to mark messagestrings in code
+  * use GenericSetup-profile for installing product
+  * factored out stripogram. it is an egg dependency now.
+  * The WindowZTool is no content any longer
+  * Added form-enabled configlet
+  * changed compatibility to Plone 3 and 4
+  * added German translations.
     [tom_gross]
 
  1.3-beta
