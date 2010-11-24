@@ -6,7 +6,8 @@
 <body>
 
 <div metal:fill-slot="main"
-     tal:define="hideMetadata here/getHide_metadata">
+     tal:define="hideMetadata here/getHide_metadata;
+		 object_title context/@@plone_context_state/object_title">
     <tal:main-macro metal:define-macro="main">
 
       <tal:block1 condition="not:hideMetadata">
