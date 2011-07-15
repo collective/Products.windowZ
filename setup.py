@@ -7,7 +7,17 @@ def _textOfModuleFile(filename):
     return open(filename, 'r').read().strip()
 
 version = _textOfModuleFile(os.path.join('Products', 'windowZ', 'version.txt'))
-long_description = _textOfModuleFile(os.path.join('Products', 'windowZ', 'README.txt'))
+long_description = _textOfModuleFile(os.path.join('Products', 'windowZ', 
+                                                  'README.txt')) 
+long_description += '\n\n'
+long_description += _textOfModuleFile(os.path.join('docs', 'INSTALL.txt'))
+long_description += '\n\n'
+long_description += _textOfModuleFile(os.path.join('docs', 'HISTORY.txt'))
+long_description += '\n\n'
+long_description += _textOfModuleFile(os.path.join('docs', 'AUTHORS.txt'))
+long_description += '\n\n'
+long_description += _textOfModuleFile(os.path.join('docs', 'LICENSE.txt'))
+long_description += '\n\n'
 
 setup(name='Products.windowZ',
       version=version,

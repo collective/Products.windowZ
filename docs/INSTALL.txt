@@ -1,24 +1,20 @@
-windowZ INSTALL
+=======
+INSTALL
+=======
 
- Uncompress or symlink windowZ into the Products directory of your Zope
- instance and restart Zope.
+* Uncompress or symlink windowZ into the Products directory of your Zope
+  instance and restart Zope.
+* Use the 'Add/Remove Products' (QuickInstaller Tool) to install windowZ.
+* You should configure windowZ in the Plone control panel (Site Setup).
+* You can create Window contents in all folders of your Plone site.
+* You can restrict Window creation through the permission:
+* windowZ: Add Window
 
- Use the 'Add/Remove Products' (QuickInstaller Tool) to install windowZ.
-
- You should configure windowZ in the Plone control panel (Site Setup).
-
- You can create Window contents in all folders of your Plone site.
-
- You can restrict Window creation through the permission:
-
-  * windowZ: Add Window
-
- You can wrap sites by using http://your_plone_site/show_window?url=http://google.com
+* You can wrap sites by using http://your_plone_site/show_window?url=http://google.com
 
 
- Requirements
- ------------
+Requirements
+============
 
   * Plone 3.0+ (Early versions of Plone are not supported by
     windowZ, but you can use CMFDisplayPage insted)
-
