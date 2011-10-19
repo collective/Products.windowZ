@@ -240,8 +240,8 @@ class Window(ATLink):
         return page_content
 
     def getRemoteUrl(self):
-        """Plone 2.5 bug fix."""
-        return False
+        """collective.flowplayer uses this method to get the url."""
+        return self.remote_url()
 
 registerType(Window, PROJECTNAME)
 
