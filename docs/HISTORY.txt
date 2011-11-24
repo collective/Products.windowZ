@@ -2,6 +2,12 @@
 HISTORY
 =======
 
+1.3b4 - unreleased
+==================
+
+* Make it work in Plone 4.1, compatibility issues [sneridagh]
+* Locales from i18n-style to locales-style [sneridagh]
+
 1.3b3 - 2011-07-17
 ==================
 

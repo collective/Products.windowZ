@@ -1,0 +1,147 @@
+# Gettext Message File for windowZ
+# Jacob Vestergaard <jacobv@headnet.dk>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: windowZ\n"
+"POT-Creation-Date: 2010-07-26 12:47+0000\n"
+"PO-Revision-Date: Wed Mar 15 01:22:34 2006\n"
+"Last-Translator: Jacob Vestergaard <jacobv@headnet.dk>\n"
+"Language-Team: TcheZope.org <tchezope@yahoogroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: da\n"
+"Language-Name: Danish\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: windowZ\n"
+
+#. Default: "This resource is not enabled in this portal."
+#: ../skins/windowZ/show_window.pt:15
+msgid "resource_not_enabled"
+msgstr "Denne ressource er ikke slået til på denne portal."
+
+#. Default: "Base URL provided as prefix for Window relative URLs. It's used only if the option Use Base URL? is checked."
+#: ../WindowZTool.py:79
+msgid "windowZ_help_base_url"
+msgstr "Standard URL, der er angivet foran relative URL'er. Bruges kun hvis indstillingen Brug Standard URL? er valgt."
+
+#. Default: "Check this option if you want to have the content of the provided page indexed in the site catalog and available in the portal search box."
+#: ../content/Window.py:105
+#, fuzzy
+msgid "windowZ_help_catalog_page_content"
+msgstr "Afkryds denne, hvis du vil have den pågældende sides indhold indekseret i sitets katalog og tilgængelig i portalens søgebox."
+
+#. Default: "Check this option if you want to use show_window template to show sites provided via URL inside a window."
+#: ../WindowZTool.py:102
+msgid "windowZ_help_dynamic_window"
+msgstr ""
+
+#. Default: "Check this option if you want to hide the page metadata, like title, description, print and send page icons, author, etc."
+#: ../content/Window.py:82
+#, fuzzy
+msgid "windowZ_help_hide_metadata"
+msgstr "Afkryds denne, hvis du ønsker at skjule sidens metadata, så som titel, beskrivelse, udskriv og tip en ven ikoner, forfatter m.v."
+
+#. Default: "If there is a proxy in front of the server you should enter the HTTP proxy address. It may seems like http://proxy_address:port or http://username:password@proxy_address:port."
+#: ../WindowZTool.py:89
+msgid "windowZ_help_http_proxy"
+msgstr "Hvis der er en proxy foran serveren, bør du angive HTTP proxy adressen. Den kan f.eks. se sådan ud: http://proxy_address:port eller http://username:password@proxy_address:port."
+
+#. Default: "Check this option if you want to inherit the URL-protocol for the iframe from the content URL "
+#: ../content/Window.py:127
+msgid "windowZ_help_inherit_protocol"
+msgstr ""
+
+#. Default: "Enter a value for the page height. If it's not provided the page height will assumes the default value defined in the site setup. You may use %, px, em, etc."
+#: ../content/Window.py:69
+msgid "windowZ_help_page_height"
+msgstr "Angiv en værdi for sidehøjden. Hvis der ikke angives noget vil sidehøjden blive som defineret i kontrolpanelet. Du kan bruge %, px, em, osv."
+
+#. Default: "Enter a value for the page width. If it's not provided the page width will assumes the default value defined in the site setup. You may use %, px, em, etc."
+#: ../content/Window.py:57
+msgid "windowZ_help_page_width"
+msgstr "Angiv en værdi for sidebredden. Hvis der ikke angives noget vil sidehøjden blive som defineret i kontrolpanelet. Du kan bruge %, px, em, osv."
+
+#. Default: "Check this option if you want to show the provided link as a reference in the bottom of the page."
+#: ../content/Window.py:117
+#, fuzzy
+msgid "windowZ_help_show_reference"
+msgstr "Afkryds denne, hvis du vil vise et link til den pågældende side i bunden af siden."
+
+#. Default: "Check this option if you want to use the base URL defined in the site setup as a prefix to the provided link."
+#: ../content/Window.py:93
+#, fuzzy
+msgid "windowZ_help_use_base_url"
+msgstr "Afkryds denne, hvis du have standard URL'en, defineret i kontrolpanelet til at stå foran linket til siden."
+
+#. Default: "Base URL"
+#: ../WindowZTool.py:78
+msgid "windowZ_label_base_url"
+msgstr "Standard URL"
+
+#. Default: "Catalog Page Content?"
+#: ../content/Window.py:103
+msgid "windowZ_label_catalog_page_content"
+msgstr "Indekser sideindhold?"
+
+#. Default: "Enable Dynamic Window"
+#: ../WindowZTool.py:100
+msgid "windowZ_label_dynamic_window"
+msgstr "Slå Dynamisk vindue til?"
+
+#. Default: "Hide Metadata?"
+#: ../content/Window.py:81
+msgid "windowZ_label_hide_metadata"
+msgstr "Skjul metadata?"
+
+#. Default: "HTTP Proxy"
+#: ../WindowZTool.py:88
+msgid "windowZ_label_http_proxy"
+msgstr "HTTP Proxy"
+
+#. Default: "Inherit Protocol?"
+#: ../content/Window.py:126
+msgid "windowZ_label_inherit_protocol"
+msgstr ""
+
+#. Default: "Page Height"
+#: ../content/Window.py:68
+msgid "windowZ_label_page_height"
+msgstr "Sidehøjde"
+
+#. Default: "Page Width"
+#: ../content/Window.py:56
+msgid "windowZ_label_page_width"
+msgstr "Sidebredde"
+
+#. Default: "Show Reference?"
+#: ../content/Window.py:115
+msgid "windowZ_label_show_reference"
+msgstr "Vis reference?"
+
+#. Default: "Use Base URL?"
+#: ../content/Window.py:92
+msgid "windowZ_label_use_base_url"
+msgstr "Brug standard URL?"
+
+#. Default: "Height of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
+#: ../WindowZTool.py:65
+msgid "windowZ_tool_help_page_height"
+msgstr "Højden på iFrame området. Dette er standardværdien for Window indholdstyperne og kan ændres individuelt for hvert Window indhold. Du kan bruge %, px, em, osv."
+
+#. Default: "Width of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
+#: ../WindowZTool.py:50
+msgid "windowZ_tool_help_page_width"
+msgstr "Bredden på iFrame området. Dette er standardværdien for Window indholdstyperne og kan ændres individuelt for hvert Window indhold. Du kan bruge %, px, em, osv."
+
+#. Default: "Default Page Height"
+#: ../WindowZTool.py:63
+msgid "windowZ_tool_label_page_height"
+msgstr "Standard sidehøjde"
+
+#. Default: "Default Page Width"
+#: ../WindowZTool.py:48
+msgid "windowZ_tool_label_page_width"
+msgstr "Standard sidebredde"
+

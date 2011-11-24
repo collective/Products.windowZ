@@ -1,0 +1,147 @@
+# Gettext Message File for windowZ
+# thegoldenaura (João Alves dos Santos) <thegoldenaura@gmail.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: windowZ\n"
+"POT-Creation-Date: 2010-06-11 14:14+0000\n"
+"PO-Revision-Date: 2011-10-06 11:22+0100\n"
+"Last-Translator: Ariel von Barnekow <ariel.von.barnekow@upcnet.es>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: es\n"
+"Language-Name: Español\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: windowZ\n"
+
+#. Default: "This resource is not enabled in this portal."
+#: ../skins/windowZ/show_window.pt:15
+msgid "resource_not_enabled"
+msgstr "Este elemento no está disponible en esta web"
+
+#. Default: "Base URL provided as prefix for Window relative URLs. It's used only if the option Use Base URL? is checked."
+#: ../WindowZTool.py:79
+msgid "windowZ_help_base_url"
+msgstr "URL utilizada como prefijo en la URL relativa creada dentro del objeto Window. Se utilizará sólo si la opción Utilizar la 'URL por defecto' ha sido seleccionada."
+
+#. Default: "Check this option if you want to have the content of the provided page indexed in the site catalog and available in the portal search box."
+#: ../content/Window.py:105
+msgid "windowZ_help_catalog_page_content"
+msgstr "Seleccionar esta opción para tener el contenido de la página web disponible en el buscador del portal. "
+
+#. Default: "Check this option if you want to use show_window template to show sites provided via URL inside a window."
+#: ../WindowZTool.py:102
+msgid "windowZ_help_dynamic_window"
+msgstr "Seleccionar esta opción para utilizar la plantilla show_window."
+
+#. Default: "Check this option if you want to hide the page metadata, like title, description, print and send page icons, author, etc."
+#: ../content/Window.py:82
+msgid "windowZ_help_hide_metadata"
+msgstr "Seleccionar esta opción para ocultar los metadatos de la página web (título, descripción, autor, iconos de imprimir y enviar la página, etc.)"
+
+#. Default: "If there is a proxy in front of the server you should enter the HTTP proxy address. It may seems like http://proxy_address:port or http://username:password@proxy_address:port."
+#: ../WindowZTool.py:89
+msgid "windowZ_help_http_proxy"
+msgstr "Si hay un proxy delante del servidor, hay que indicar la dirección del proxy. Ha de ser del tipo: http://nombre_proxy:puerto o http://nombre_usuario:password@nombre_proxy:puerto"
+
+#. Default: "Check this option if you want to inherit the URL-protocol for the iframe from the content URL "
+#: ../content/Window.py:127
+msgid "windowZ_help_inherit_protocol"
+msgstr "Marcar esta opción para heredar el protocolo URL para el iframe de la URL del contenido"
+
+#. Default: "Enter a value for the page height. If it's not provided the page height will assumes the default value defined in the site setup. You may use %, px, em, etc."
+#: ../content/Window.py:69
+msgid "windowZ_help_page_height"
+msgstr "Introducir un valor para el alto de la página web. Si no se introduce ningún valor, se utilizará el valor por defecto definido en la Configuración del sitio web. Puede utilizar %, px, em, etc."
+
+#. Default: "Enter a value for the page width. If it's not provided the page width will assumes the default value defined in the site setup. You may use %, px, em, etc."
+#: ../content/Window.py:57
+msgid "windowZ_help_page_width"
+msgstr "Introducir un valor para el ancho de la página web. Si no se introduce ningún valor, se utilizará el valor por defecto definido en la Configuración del sitio web. Puede utilizar %, px, em, etc."
+
+#. Default: "Check this option if you want to show the provided link as a reference in the bottom of the page."
+#: ../content/Window.py:117
+msgid "windowZ_help_show_reference"
+msgstr "Seleccionar esta opción para mostrar el enlace como una referéncia al pie de la página."
+
+#. Default: "Check this option if you want to use the base URL defined in the site setup as a prefix to the provided link."
+#: ../content/Window.py:93
+msgid "windowZ_help_use_base_url"
+msgstr "Seleccionar esta opción para utilizar como prefijo del enlace la URL por defecto (definida en la Configuración del sitio web)."
+
+#. Default: "Base URL"
+#: ../WindowZTool.py:78
+msgid "windowZ_label_base_url"
+msgstr "URL por defecto"
+
+#. Default: "Catalog Page Content?"
+#: ../content/Window.py:103
+msgid "windowZ_label_catalog_page_content"
+msgstr "Catalogar el contenido de la página web"
+
+#. Default: "Enable Dynamic Window"
+#: ../WindowZTool.py:100
+msgid "windowZ_label_dynamic_window"
+msgstr "Activar la ventana dinámica"
+
+#. Default: "Hide Metadata?"
+#: ../content/Window.py:81
+msgid "windowZ_label_hide_metadata"
+msgstr "Ocultar los Metadatos"
+
+#. Default: "HTTP Proxy"
+#: ../WindowZTool.py:88
+msgid "windowZ_label_http_proxy"
+msgstr "Dirección HTTP del servidor proxy"
+
+#. Default: "Inherit Protocol?"
+#: ../content/Window.py:126
+msgid "windowZ_label_inherit_protocol"
+msgstr "¿Heredar protocolo?"
+
+#. Default: "Page Height"
+#: ../content/Window.py:68
+msgid "windowZ_label_page_height"
+msgstr "Alto de la ventana"
+
+#. Default: "Page Width"
+#: ../content/Window.py:56
+msgid "windowZ_label_page_width"
+msgstr "Ancho de la ventana"
+
+#. Default: "Show Reference?"
+#: ../content/Window.py:115
+msgid "windowZ_label_show_reference"
+msgstr "Mostrar la referencia"
+
+#. Default: "Use Base URL?"
+#: ../content/Window.py:92
+msgid "windowZ_label_use_base_url"
+msgstr "Utilizar la URL por defecto"
+
+#. Default: "Height of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
+#: ../WindowZTool.py:65
+msgid "windowZ_tool_help_page_height"
+msgstr "Valor por defecto para el alto de los contenidos tipus Window y que puede ser redefinido individualmente en cada contenido Window. Puede utilizar %, px, em, etc."
+
+#. Default: "Width of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
+#: ../WindowZTool.py:50
+msgid "windowZ_tool_help_page_width"
+msgstr "Valor por defecto para el ancho de los contenidos tipus Window y que puede ser redefinido individualmente en cada contenido Window. Puede utilizar %, px, em, etc."
+
+#. Default: "Default Page Height"
+#: ../WindowZTool.py:63
+msgid "windowZ_tool_label_page_height"
+msgstr "Alto por defecto"
+
+#. Default: "Default Page Width"
+#: ../WindowZTool.py:48
+msgid "windowZ_tool_label_page_width"
+msgstr "Ancho por defecto"
+
+#~ msgid "description_edit_windowztool"
+#~ msgstr ""
+#~ "Aquí se pueden ver y cambiar las opciones que tiene el elemento Window."
+

@@ -35,7 +35,7 @@
                 height="500px"
                 frameborder="0"
                 tal:attributes="src here/remote_url;
-                                title object_title;
+                                title context/@@plone_context_state/object_title;
                                 width here/getPageWidth;
                                 height here/getPageHeight;">
             <span i18n:translate="link_address">The link address is:</span>

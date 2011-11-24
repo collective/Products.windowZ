@@ -1,0 +1,55 @@
+# Gettext Message File for Plone
+# thegoldenaura (João Alves dos Santos) <thegoldenaura@gmail.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: windowZ\n"
+"POT-Creation-Date: Mon Sep 11 17:44:34 2006\n"
+"PO-Revision-Date: Wed Mar 17 01:22:34 2006\n"
+"Last-Translator: roberto diaz <ploneteam@upcnet.es>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: es\n"
+"Language-Name: Español\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: plone\n"
+
+msgid "A Window is a content type that shows one URL inside an iFrame in a page of the site."
+msgstr "Un Window es un tipo de contenido que muestra una URL externa dentro de una página del portal."
+
+msgid "Both Columns Suppressed Window"
+msgstr "Window sin columnas"
+
+msgid "Left Column Suppressed Window"
+msgstr "Window sin la columna izquierda"
+
+msgid "Normal Window"
+msgstr "Window (vista por defecto)"
+
+msgid "Right Column Suppressed Window"
+msgstr "Window sin la columna derecha"
+
+msgid "Show Window"
+msgstr "Mostrar el Window"
+
+msgid "Window"
+msgstr "Window"
+
+#. Default: "A Window is a content type that shows one URL inside an iFrame in a page of the site."
+#: content/Window.py
+msgid "description_edit_window"
+msgstr "Un Window es un tipo de contenido que muestra una URL externa dentro de una página del portal."
+
+#. Default: "windowZ tool with general settings for Window content types."
+#: WindowZTool.py
+msgid "description_edit_windowztool"
+msgstr "Herramienta de configuración de windowZ. Se muestran las opciones generales para los contenidos de tipo"
+
+msgid "windowZ Settings"
+msgstr "windowZ"
+
+msgid "windowZ Tool"
+msgstr "Opciones de windowZ"
+
