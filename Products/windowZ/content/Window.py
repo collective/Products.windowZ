@@ -239,9 +239,6 @@ class Window(ATLink):
         page_content = html2text(page_body, ignore_tags=ignored_tags)
         return page_content
 
-    def getRemoteUrl(self):
-        """Plone 2.5 bug fix."""
-        return False
 
 registerType(Window, PROJECTNAME)
 
