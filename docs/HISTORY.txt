@@ -2,8 +2,8 @@
 HISTORY
 =======
 
-1.3b4 - unreleased
-==================
+1.3 - 2012-03-30
+================
 
 * remove workaround for Plone 2.5 which breaks with c.flowplayer 
   in Plone 4.2b1 [tom_gross]
