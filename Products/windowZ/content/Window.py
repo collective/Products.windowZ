@@ -34,6 +34,7 @@ from stripogram import html2text
 
 import zope.interface
 from AccessControl import ClassSecurityInfo
+from ZODB.POSException import ConflictError
 
 from Products.Archetypes.atapi import *
 from Products.ATContentTypes.content.link import ATLink
@@ -164,9 +165,14 @@ class Window(ATLink):
                 remote_url = self.remote_url()
                 page = urllib2.urlopen(remote_url)
                 page_body = page.read()
+            except ConflictError:
+                raise
             except:
                 page_body = ''
-            page_content = self._processPageBody(page_body)
+            try:
+                page_content = self._processPageBody(page_body)
+            except IndexError:
+                page_content = ''
         else:
             page_content = ''
         return "%s %s %s" % (self.Title(), self.Description(), page_content)
