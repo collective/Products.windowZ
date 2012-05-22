@@ -244,6 +244,12 @@ class Window(ATLink):
         ignored_tags = ('img', 'style')
         page_content = html2text(page_body, ignore_tags=ignored_tags)
         return page_content
+        
+    def getRemoteUrl(self):
+        """Return empty string to prevent redirection to external page
+        in navtree
+        """
+        return ""
 
 
 registerType(Window, PROJECTNAME)
