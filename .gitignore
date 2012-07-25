@@ -1,3 +1,5 @@
 dist
 build
 *.mo
+*.pyc
+*.egg-info
