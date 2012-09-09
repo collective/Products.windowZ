@@ -2,7 +2,7 @@
 HISTORY
 =======
 
-1.4 - unreleased
+1.4 - 2012-09-09
 ================
 
 * enhanced error catching in SearchableText-method
