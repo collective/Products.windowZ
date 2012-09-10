@@ -21,10 +21,7 @@ long_description += '\n\n'
 
 setup(name='Products.windowZ',
       version=version,
-      description=("windowZ provides a new content type, named Window, "
-                   "that is similar to the content type Link, but it shows "
-                   "the provided relative or absolute URL inside an iFrame "
-                   "rendered as a Plone page."),
+      description="Show web-pages inside an iframe. Plone content-type.",
       long_description=long_description,
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
