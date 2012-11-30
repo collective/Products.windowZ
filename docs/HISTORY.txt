@@ -2,7 +2,7 @@
 HISTORY
 =======
 
-1.4.1 - 2012-11-29
+1.4.1 (2012-11-30)
 ==================
 
 * Fixed views with special column handling
