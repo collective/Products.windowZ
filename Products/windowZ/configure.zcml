@@ -3,6 +3,8 @@
            xmlns:gs="http://namespaces.zope.org/genericsetup"
            i18n_domain="windowZ">
 
+  <include package="Products.CMFCore" file="configure.zcml" />
+
   <gs:registerProfile
       name="default"
       title="windowZ"
