@@ -27,7 +27,7 @@
  <alias from="(Default)" to="(dynamic view)"/>
  <alias from="edit" to="base_edit"/>
  <alias from="properties" to="base_metadata"/>
- <alias from="sharing" to="folder_localrole_form"/>
+ <alias from="sharing" to="@@sharing"/>
  <alias from="view" to="(selected layout)"/>
  <action title="View" action_id="view" category="object"
     condition_expr="python:1" icon_expr="" link_target=""
@@ -38,15 +38,5 @@
     condition_expr="python:1" icon_expr="" link_target=""
     url_expr="string:${object_url}/edit" visible="True">
   <permission value="Modify portal content"/>
- </action>
- <action title="Properties" action_id="metadata" category="object"
-    condition_expr="python:1" icon_expr="" link_target=""
-    url_expr="string:${object_url}/properties" visible="True">
-  <permission value="Modify portal content"/>
- </action>
- <action title="Sharing" action_id="local_roles" category="object"
-    condition_expr="python:1" icon_expr="" link_target=""
-    url_expr="string:${object_url}/sharing" visible="True">
-  <permission value="Manage properties"/>
  </action>
 </object>
