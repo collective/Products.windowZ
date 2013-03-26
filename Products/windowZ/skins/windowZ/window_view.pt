@@ -49,11 +49,6 @@
                         tal:content="here/remote_url">remote url</a>
         </p>
 
-      <tal:block2 condition="not:hideMetadata">
-        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
-            show related items if they exist
-        </div>
-      </tal:block2>
     </tal:main-macro>
 </div>
 
