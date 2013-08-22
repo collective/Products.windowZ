@@ -43,18 +43,18 @@ class IWindow(zope.interface.Interface):
         pass
 
     def getPageWidth():
-        """Returns page_width or the default value from portal_windowZ.
+        """Returns page_width or the default value from portal_windowz.
         """
         pass
 
     def getPageHeight():
-        """Returns page_height or the default value from portal_windowZ.
+        """Returns page_height or the default value from portal_windowz.
         """
         pass
 
     def getProxies():
         """Returns the proxy configuration if it's provided by
-        portal_windowZ tool.
+        portal_windowz tool.
         """
         pass
 

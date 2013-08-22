@@ -5,8 +5,16 @@ HISTORY
 1.5 (unreleased)
 ================
 
-- Nothing changed yet.
-
+- Fixed ``AttributeError: portal_windowZ`` in show_window template,
+  even though this template seems unused.  Note that in version 1.3b3
+  the id ``portal_windowZ` was renamed to ``portal_windowz`, with a
+  lowercase ``z``.  If you get this AttributeError when viewing
+  windowz (also with other templates than show_window) then you have
+  probably upgraded from an old version and the tool on your website
+  still has the old ``portal_windowZ`` id.  In that case you should
+  deactivate the windowZ product in the Add-ons control panel and
+  activate it again.
+  [maurits]
 
 1.4.1 (2012-11-30)
 ==================

@@ -40,7 +40,7 @@ from Products.windowZ.interfaces import IWindowZTool, IWindowZSettings
 
 class WindowZTool(UniqueObject, SimpleItem):
     """The windowZ tool. A singleton object that provides functionality
-    to Window objects. The fixed id is portal_windowZ.
+    to Window objects. The fixed id is portal_windowz.
     """
 
     implements(IWindowZTool, IWindowZSettings)

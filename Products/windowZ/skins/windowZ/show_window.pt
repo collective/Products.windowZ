@@ -10,7 +10,7 @@
 
 <div metal:fill-slot="main"
      tal:define="remote_url request/url|nothing;
-                 window_enabled here/portal_windowZ/getDynamic_window;">
+                 window_enabled here/portal_windowz/getDynamic_window;">
 
     <div class="portalMessage"
          tal:condition="not:window_enabled"
