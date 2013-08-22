@@ -3,7 +3,7 @@
 # File: tests.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
