@@ -3,7 +3,7 @@
 # File: testDoc.py
 #
 # Copyright (c) 2007 by Jean Rodrigo Ferri
-# Generator: ArchGenXML 
+# Generator: ArchGenXML
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -34,12 +34,7 @@ __docformat__ = 'plaintext'
 # Test-cases for class(es) IWindow, Window
 #
 
-from Testing import ZopeTestCase
 from Products.windowZ.tests.windowZTestCase import windowZTestCase
-
-# Import the tested classes
-from Products.windowZ.interfaces import IWindow
-from Products.windowZ.content.Window import Window
 
 
 class testDoc(windowZTestCase):
@@ -63,7 +58,6 @@ def test_suite():
     ##code-section test-suite-in-between #fill in your manual code here
 ##/code-section test-suite-in-between
 
-
     return TestSuite((
         ZopeDocFileSuite('testDoc.txt',
                          package='Products.windowZ.tests',
@@ -72,5 +66,3 @@ def test_suite():
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-

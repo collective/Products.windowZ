@@ -42,17 +42,13 @@ import logging
 logger = logging.getLogger('windowZ')
 logger.info('Installing Product')
 
-import os, os.path
-from App.Common import package_home
 from Products.CMFCore import utils as cmfutils
-from Products.CMFCore import permissions as CMFCorePermissions
 
 from Products.CMFCore import DirectoryView
 from Products.CMFCore.utils import ToolInit
-from Products.Archetypes.atapi import *
+from Products.Archetypes.atapi import process_types
 from Products.Archetypes import listTypes
-from Products.Archetypes.utils import capitalize
-from config import *
+from config import PROJECTNAME, ADD_CONTENT_PERMISSION, product_globals
 
 DirectoryView.registerDirectory('skins', product_globals)
 
@@ -61,21 +57,22 @@ from zope.i18nmessageid import MessageFactory
 WindowZMessageFactory = MessageFactory('windowZ')
 ##/code-section custom-init-head
 
+
 def initialize(context):
     ##code-section custom-init-top #fill in your manual code here
     ##/code-section custom-init-top
 
     # imports packages and types for registration
-    import interfaces
     import content
+    content  # pyflakes
 
     import WindowZTool
 
     # Initialize portal tools
-    ToolInit( PROJECTNAME +' Tools',
-                tools = (WindowZTool.WindowZTool,),
-                icon='tool.gif'
-                ).initialize( context )
+    ToolInit(PROJECTNAME +' Tools',
+             tools = (WindowZTool.WindowZTool,),
+             icon='tool.gif'
+             ).initialize(context)
 
     # Initialize portal content
     all_content_types, all_constructors, all_ftis = process_types(
@@ -84,8 +81,8 @@ def initialize(context):
 
     cmfutils.ContentInit(
         PROJECTNAME + ' Content',
-        content_types      = all_content_types,
-        permission         = ADD_CONTENT_PERMISSION,
+        content_types = all_content_types,
+        permission = ADD_CONTENT_PERMISSION,
         extra_constructors = all_constructors,
-        fti                = all_ftis,
+        fti = all_ftis,
         ).initialize(context)

@@ -34,18 +34,14 @@ __docformat__ = 'plaintext'
 # Setup tests
 #
 
-import os, sys
-from Testing import ZopeTestCase
 from Products.windowZ.tests.windowZTestCase import windowZTestCase
+
 
 class testSetup(windowZTestCase):
     """Test cases for the generic setup of the product."""
 
     ##code-section class-header_testSetup #fill in your manual code here
     ##/code-section class-header_testSetup
-
-    def afterSetUp(self):
-        ids = self.portal.objectIds()
 
     def test_tools(self):
         ids = self.portal.objectIds()
@@ -74,4 +70,3 @@ def test_suite():
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-

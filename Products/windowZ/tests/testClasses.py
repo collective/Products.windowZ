@@ -34,13 +34,7 @@ __docformat__ = 'plaintext'
 # Test-cases for class(es) Window, WindowZTool
 #
 
-from Testing import ZopeTestCase
-from Products.windowZ.config import *
 from Products.windowZ.tests.windowZTestCase import windowZTestCase
-
-# Import the tested classes
-from Products.windowZ.content.Window import Window
-from Products.windowZ.WindowZTool import WindowZTool
 
 ##code-section module-beforeclass #fill in your manual code here
 ##/code-section module-beforeclass
@@ -99,13 +93,14 @@ class testClasses(windowZTestCase):
         self.assertEqual(self.window.remote_url(),
                          'http://www.plone.org/products')
 
-    def test_iframeurl_inherit_protocol(self):
+    def test_iframeurl_inherit_protocol_with_server_url(self):
         self.window.setRemoteUrl('http://www.plone.org/products')
         self.window.setInherit_protocol(True)
         self.app.REQUEST.set('SERVER_URL', 'https://nohost')
         self.assertEqual(self.window.getUse_base_url(), False)
         self.assertEqual(self.window.remote_url(),
                          'https://www.plone.org/products')
+
 
 def test_suite():
     from unittest import TestSuite, makeSuite
@@ -115,5 +110,3 @@ def test_suite():
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-

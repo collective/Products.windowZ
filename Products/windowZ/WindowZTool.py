@@ -27,7 +27,7 @@
 __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
-from zope.interface import implements, classProvides
+from zope.interface import implements
 from zope.schema.fieldproperty import FieldProperty
 from AccessControl import ClassSecurityInfo
 from OFS.SimpleItem import SimpleItem
@@ -36,6 +36,7 @@ from App.class_init import InitializeClass
 from Products.CMFCore.utils import UniqueObject
 
 from Products.windowZ.interfaces import IWindowZTool, IWindowZSettings
+
 
 class WindowZTool(UniqueObject, SimpleItem):
     """The windowZ tool. A singleton object that provides functionality

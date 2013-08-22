@@ -32,12 +32,15 @@ __docformat__ = 'plaintext'
 #
 
 ##code-section module-header #fill in your manual code here
+import code
+import sys
 ##/code-section module-header
 
 from Testing import ZopeTestCase
 from Products.PloneTestCase import PloneTestCase
 ZopeTestCase.installProduct('windowZ')
 PloneTestCase.setupPloneSite(products=('windowZ',))
+
 
 class windowZTestCase(PloneTestCase.PloneTestCase):
     """Base TestCase for windowZ."""
@@ -89,5 +92,3 @@ def test_suite():
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-
