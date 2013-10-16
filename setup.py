@@ -5,20 +5,13 @@ from setuptools import setup
 
 import os
 
-
-def _textOfModuleFile(filename):
-    return open(filename, 'r').read().strip()
-
-version = _textOfModuleFile(os.path.join('Products', 'windowZ', 'version.txt'))
-long_description = _textOfModuleFile(os.path.join('Products', 'windowZ',
-                                                  'README.txt'))
-long_description += '\n\n'
-long_description += _textOfModuleFile(os.path.join('docs', 'INSTALL.txt'))
-long_description += '\n\n'
-long_description += _textOfModuleFile('CHANGES.rst')
-long_description += '\n\n'
-long_description += _textOfModuleFile('CONTRIBUTORS.rst')
-long_description += '\n\n'
+version = '1.5.dev0'
+long_description = (
+    open('README.rst').read() + '\n' +
+    open(os.path.join('docs', 'INSTALL.txt')).read() + '\n' +
+    open('CONTRIBUTORS.rst').read() + '\n' +
+    open('CHANGES.rst').read()
+)
 
 setup(name='Products.windowZ',
       version=version,

@@ -1,3 +1,15 @@
+================
+Products.windowZ
+================
+
+.. contents:: Table of Contents
+
+.. image:: https://secure.travis-ci.org/collective/Products.windowZ.png?branch=master
+    :target: http://travis-ci.org/collective/Products.windowZ
+
+.. image:: https://coveralls.io/repos/collective/Products.windowZ/badge.png?branch=master
+    :target: https://coveralls.io/r/collective/Products.windowZ
+
 Many people would like to have external web pages inside your Plone site.
 windowZ was born to do it, in an elegant way.
 
