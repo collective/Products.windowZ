@@ -2,7 +2,7 @@
 Changelog
 =========
 
-1.5 (unreleased)
+1.5 (2013-10-28)
 ================
 
 - Fixed ``AttributeError: portal_windowZ`` in show_window template,
