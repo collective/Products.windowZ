@@ -165,12 +165,14 @@ class Window(ATLink):
                 remote_url = self.remote_url()
                 page = urllib2.urlopen(remote_url)
                 page_body = page.read()
+                content_type = page.info().type
             except ConflictError:
                 raise
             except:
                 page_body = ''
+                content_type = None
             try:
-                page_content = self._processPageBody(page_body)
+                page_content = self._processPageBody(page_body, content_type)
             except IndexError:
                 page_content = ''
         else:
@@ -237,10 +239,13 @@ class Window(ATLink):
         return '100%'
 
     security.declarePrivate('_processPageBody')
-    def _processPageBody(self, page_body):
+    def _processPageBody(self, page_body, content_type):
         """Process the link body with strip-o-gram library catching only the
         page content.
         """
+        # XXX Improve by extracting text from other content types
+        if content_type and 'html' not in content_type:
+            return ''
         ignored_tags = ('img', 'style')
         page_content = html2text(page_body, ignore_tags=ignored_tags)
         return page_content
