@@ -55,7 +55,6 @@ class WindowZTool(UniqueObject, SimpleItem):
     page_height = FieldProperty(IWindowZSettings['page_height'])
     base_url = FieldProperty(IWindowZSettings['base_url'])
     http_proxy = FieldProperty(IWindowZSettings['http_proxy'])
-    dynamic_window = FieldProperty(IWindowZSettings['dynamic_window'])
 
     # BBB methods from old Archetype content tool
     def getPage_width(self):
@@ -70,9 +69,6 @@ class WindowZTool(UniqueObject, SimpleItem):
     def getHttp_proxy(self):
         return self.http_proxy
 
-    def getDynamic_window(self):
-        return self.dynamic_window
-
     # setter
     def setPage_width(self, value):
         self.page_width = value
@@ -86,7 +82,5 @@ class WindowZTool(UniqueObject, SimpleItem):
     def setHttp_proxy(self, value):
         self.http_proxy = value
 
-    def setDynamic_window(self, value):
-        self.dynamic_window = value
 
 InitializeClass(WindowZTool)

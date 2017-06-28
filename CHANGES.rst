@@ -2,10 +2,11 @@
 Changelog
 =========
 
-1.6 (unreleased)
+2.0 (unreleased)
 ================
 
-- Nothing changed yet.
+- Removed ``show_window`` feature which was apparently unused and didn't work
+  as advertised.
 
 
 1.5 (2013-10-28)
