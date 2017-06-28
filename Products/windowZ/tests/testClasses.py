@@ -31,9 +31,10 @@ __docformat__ = 'plaintext'
 ##/code-section module-header
 
 #
-# Test-cases for class(es) Window, WindowZTool
+# Test-cases for class(es) Window
 #
 
+from plone.registry.interfaces import IRegistry
 from Products.windowZ.tests.windowZTestCase import windowZTestCase
 
 ##code-section module-beforeclass #fill in your manual code here
@@ -41,7 +42,7 @@ from Products.windowZ.tests.windowZTestCase import windowZTestCase
 
 
 class testClasses(windowZTestCase):
-    """Test-cases for class(es) Window, WindowZTool."""
+    """Test-cases for class(es) Window."""
 
     ##code-section class-header_testClasses #fill in your manual code here
     ##/code-section class-header_testClasses
@@ -79,7 +80,9 @@ class testClasses(windowZTestCase):
                          'http://www.plone.org/products')
 
     def test_iframeurl_with_base(self):
-        self.portal.portal_windowz.setBase_url(u'ftp://')
+        registry = queryUtility(IRegistry)
+        registry['Products.windowZ.interfaces.IWindowZSettings.base_url'] = \
+            u'ftp://'
 
         self.window.setRemoteUrl('www.plone.org/products')
         self.window.setUse_base_url(True)

@@ -45,7 +45,6 @@ logger.info('Installing Product')
 from Products.CMFCore import utils as cmfutils
 
 from Products.CMFCore import DirectoryView
-from Products.CMFCore.utils import ToolInit
 from Products.Archetypes.atapi import process_types
 from Products.Archetypes import listTypes
 from config import PROJECTNAME, ADD_CONTENT_PERMISSION, product_globals
@@ -65,14 +64,6 @@ def initialize(context):
     # imports packages and types for registration
     import content
     content  # pyflakes
-
-    import WindowZTool
-
-    # Initialize portal tools
-    ToolInit(PROJECTNAME +' Tools',
-             tools = (WindowZTool.WindowZTool,),
-             icon='tool.gif'
-             ).initialize(context)
 
     # Initialize portal content
     all_content_types, all_constructors, all_ftis = process_types(

@@ -43,10 +43,6 @@ class testSetup(windowZTestCase):
     ##code-section class-header_testSetup #fill in your manual code here
     ##/code-section class-header_testSetup
 
-    def test_tools(self):
-        ids = self.portal.objectIds()
-        self.failUnless('portal_windowz' in ids)
-
     def test_types(self):
         ids = self.portal.portal_types.objectIds()
         self.failUnless('Window' in ids)

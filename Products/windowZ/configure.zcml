@@ -4,6 +4,7 @@
            i18n_domain="windowZ">
 
   <include package="Products.CMFCore" file="configure.zcml" />
+  <include package="plone.app.registry" />
 
   <gs:registerProfile
       name="default"
@@ -13,9 +14,19 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <gs:upgradeStep
+      title="Use registry instead of portal_windowz tool"
+      description="copy settings to registry and remove tool"
+      source="1"
+      destination="2"
+      handler=".controlpanel.remove_tool"
+      sortkey="1"
+      profile="Products.windowZ:default"
+      />
+
   <browser:page
-      for=".interfaces.IWindowZTool"
-      name="edit"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="Products-windowZ-controlpanel"
       class=".controlpanel.WindowZControlPanelForm"
       permission="cmf.ManagePortal"
       />
