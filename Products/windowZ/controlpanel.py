@@ -20,10 +20,11 @@ WindowZControlPanel = layout.wrap_form(
 
 
 def remove_tool(setup):
+    setup.runAllImportStepsFromProfile('profile-Products.windowZ:default')
     tool = api.portal.get_tool('portal_windowz')
     prefix = IWindowZSettings.__identifier__ + '.'
     for name in IWindowZSettings:
         value = getattr(tool, name, None) or u''
         api.portal.set_registry_record(prefix + name, value)
     portal = api.portal.get()
-    del portal['portal_windowz']
+    portal.manage_delObjects(['portal_windowz'])
