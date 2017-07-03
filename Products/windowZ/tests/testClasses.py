@@ -36,6 +36,7 @@ __docformat__ = 'plaintext'
 
 from plone.registry.interfaces import IRegistry
 from Products.windowZ.tests.windowZTestCase import windowZTestCase
+from zope.component import queryUtility
 
 ##code-section module-beforeclass #fill in your manual code here
 ##/code-section module-beforeclass
