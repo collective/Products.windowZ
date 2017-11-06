@@ -40,4 +40,4 @@ to choose the way... ;-)
 
 Please, help us to improve and translate windowZ!
 
-Please note: version 2.x only work on Plone 5.0.x and higher, for Plone 4 use 1.x.
+**Please note: version 2.x only work on Plone 5.0.x and higher, for Plone 4 use 1.x.**
