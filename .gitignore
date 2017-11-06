@@ -14,3 +14,12 @@ eggs
 local.cfg
 parts
 var
+/buildout.cfg
+/include/*
+/lib/*
+/local/
+/pip-selfcheck.json
+*.sublime-project
+*.sublime-workspace
+/docs/Makefile
+/docs/make.bat
