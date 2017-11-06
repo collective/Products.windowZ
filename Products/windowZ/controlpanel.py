@@ -1,4 +1,3 @@
-from plone import api
 from Products.windowZ import WindowZMessageFactory as _
 from Products.windowZ.interfaces import IWindowZSettings
 from plone.app.registry.browser import controlpanel
@@ -17,14 +16,3 @@ class WindowZControlPanelForm(controlpanel.RegistryEditForm):
 
 WindowZControlPanel = layout.wrap_form(
     WindowZControlPanelForm, controlpanel.ControlPanelFormWrapper)
-
-
-def remove_tool(setup):
-    setup.runAllImportStepsFromProfile('profile-Products.windowZ:default')
-    tool = api.portal.get_tool('portal_windowz')
-    prefix = IWindowZSettings.__identifier__ + '.'
-    for name in IWindowZSettings:
-        value = getattr(tool, name, None) or u''
-        api.portal.set_registry_record(prefix + name, value)
-    portal = api.portal.get()
-    portal.manage_delObjects(['portal_windowz'])

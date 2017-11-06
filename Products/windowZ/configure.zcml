@@ -6,22 +6,14 @@
   <include package="Products.CMFCore" file="configure.zcml" />
   <include package="plone.app.registry" />
 
+  <include file="upgrades.zcml" />
+
   <gs:registerProfile
       name="default"
       title="windowZ"
       directory="profiles/default"
       description="Include iFrames as Plone content"
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-  <gs:upgradeStep
-      title="Use registry instead of portal_windowz tool"
-      description="copy settings to registry and remove tool"
-      source="1"
-      destination="2"
-      handler=".controlpanel.remove_tool"
-      sortkey="1"
-      profile="Products.windowZ:default"
       />
 
   <browser:page
