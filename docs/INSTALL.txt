@@ -10,8 +10,6 @@ INSTALL
 * You can restrict Window creation through the permission:
 * windowZ: Add Window
 
-* You can wrap sites by using http://your_plone_site/show_window?url=http://google.com
-
 
 Requirements
 ============

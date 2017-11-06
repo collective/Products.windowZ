@@ -41,11 +41,14 @@ from Products.ATContentTypes.content.link import ATLink
 from Products.ATContentTypes.content.link import ATLinkSchema
 
 from Products.CMFCore.permissions import View
-from Products.CMFCore.utils import getToolByName
 
 from Products.windowZ.interfaces import IWindow
 from Products.windowZ.config import PROJECTNAME
 from Products.windowZ import WindowZMessageFactory as _
+
+from zope.component import queryUtility
+from plone.registry.interfaces import IRegistry
+
 
 schema = Schema((
 
@@ -141,6 +144,12 @@ Window_schema = ATLinkSchema.copy() + \
 Window_schema['remoteUrl'].accessor = 'getFrameUrl'
 ##/code-section after-schema
 
+
+def registry_record(key):
+    registry = queryUtility(IRegistry)
+    return registry['Products.windowZ.interfaces.IWindowZSettings.' + key]
+
+
 class Window(ATLink):
     """A Window is a content type that shows one URL inside an iFrame
     in a page of the site.
@@ -183,10 +192,9 @@ class Window(ATLink):
 
     security.declareProtected(View, 'getProxies')
     def getProxies(self):
-        """Open proxy HTTP connection if it was setting on portal_windowz tool.
+        """Open proxy HTTP connection if it was set in the registry.
         """
-        portal_windowz = getToolByName(self, 'portal_windowz')
-        http_proxy = portal_windowz.getHttp_proxy()
+        http_proxy = registry_record('http_proxy')
         if http_proxy:
             try:
                 proxies = {'http': http_proxy}
@@ -198,14 +206,14 @@ class Window(ATLink):
 
     security.declareProtected(View, 'getPageHeight')
     def getPageHeight(self):
-        """Returns page_height or the default value from portal_windowz.
+        """Returns page_height or the default value from the registry.
         """
         if self.getPage_height():
             return self.getPage_height()
         else:
-            portal_windowz = getToolByName(self, 'portal_windowz')
-            if portal_windowz.getPage_height():
-                return portal_windowz.getPage_height()
+            page_height = registry_record('page_height')
+            if page_height:
+                return page_height
         return '500px'
 
     security.declareProtected(View, 'remote_url')
@@ -214,8 +222,7 @@ class Window(ATLink):
         base_url if it's selected by user.
         """
         if self.getUse_base_url():
-            portal_windowz = getToolByName(self, 'portal_windowz')
-            base_url = portal_windowz.getBase_url()
+            base_url = registry_record('base_url')
             url = "%s%s" % (base_url, self.getFrameUrl())
         else:
             url = self.getFrameUrl()
@@ -228,14 +235,14 @@ class Window(ATLink):
 
     security.declareProtected(View, 'getPageWidth')
     def getPageWidth(self):
-        """Returns page_width or the default value from portal_windowz.
+        """Returns page_width or the default value from the registry.
         """
         if self.getPage_width():
             return self.getPage_width()
         else:
-            portal_windowz = getToolByName(self, 'portal_windowz')
-            if portal_windowz.getPage_width():
-                return portal_windowz.getPage_width()
+            page_width = registry_record('page_width')
+            if page_width:
+                return page_width
         return '100%'
 
     security.declarePrivate('_processPageBody')

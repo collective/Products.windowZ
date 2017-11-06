@@ -4,6 +4,9 @@
            i18n_domain="windowZ">
 
   <include package="Products.CMFCore" file="configure.zcml" />
+  <include package="plone.app.registry" />
+
+  <include file="upgrades.zcml" />
 
   <gs:registerProfile
       name="default"
@@ -14,8 +17,8 @@
       />
 
   <browser:page
-      for=".interfaces.IWindowZTool"
-      name="edit"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="Products-windowZ-controlpanel"
       class=".controlpanel.WindowZControlPanelForm"
       permission="cmf.ManagePortal"
       />

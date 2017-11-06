@@ -2,10 +2,13 @@
 Changelog
 =========
 
-1.6 (unreleased)
+2.0 (unreleased)
 ================
 
-- Nothing changed yet.
+- Ported to Plone 5: removed WindowZTool and replaced it with registry.
+
+- Removed ``show_window`` feature which was apparently unused and didn't work
+  as advertised.
 
 
 1.5 (2013-10-28)

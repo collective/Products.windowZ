@@ -5,7 +5,7 @@ from setuptools import setup
 
 import os
 
-version = '1.6.dev0'
+version = '2.0dev0'
 long_description = (
     open('README.rst').read() + '\n' +
     open(os.path.join('docs', 'INSTALL.txt')).read() + '\n' +
@@ -21,10 +21,7 @@ setup(name='Products.windowZ',
           'Development Status :: 6 - Mature',
           'Environment :: Web Environment',
           'Framework :: Plone',
-          'Framework :: Plone :: 4.0',
-          'Framework :: Plone :: 4.1',
-          'Framework :: Plone :: 4.2',
-          'Framework :: Plone :: 4.3',
+          'Framework :: Plone :: 5.0',
           'License :: OSI Approved :: GNU General Public License (GPL)',
           'Operating System :: OS Independent',
           'Programming Language :: Python',
@@ -41,11 +38,12 @@ setup(name='Products.windowZ',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'plone.app.controlpanel',
-          'plone.fieldsets',
+          'plone.app.registry',
+          'plone.z3cform',
           'Products.Archetypes',
           'Products.ATContentTypes',
           'Products.CMFCore',
+          'Products.CMFPlone',
           'Products.GenericSetup',
           'setuptools',
           'stripogram',
@@ -56,7 +54,6 @@ setup(name='Products.windowZ',
       extras_require={
           'test': [
               'Products.PloneTestCase',
-              'Testing.ZopeTestCase',
           ],
       },
       entry_points="""

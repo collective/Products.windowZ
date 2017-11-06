@@ -35,15 +35,18 @@ from App.class_init import InitializeClass
 
 from Products.CMFCore.utils import UniqueObject
 
-from Products.windowZ.interfaces import IWindowZTool, IWindowZSettings
+from Products.windowZ.interfaces import IWindowZSettings
 
+######################################################################
+# BBB, instances are removed by an upgrade step in version 2.0
+######################################################################
 
 class WindowZTool(UniqueObject, SimpleItem):
     """The windowZ tool. A singleton object that provides functionality
     to Window objects. The fixed id is portal_windowz.
     """
 
-    implements(IWindowZTool, IWindowZSettings)
+    implements(IWindowZSettings)
 
     id = 'portal_windowz'
     title = 'windowZ Tool'
@@ -55,38 +58,6 @@ class WindowZTool(UniqueObject, SimpleItem):
     page_height = FieldProperty(IWindowZSettings['page_height'])
     base_url = FieldProperty(IWindowZSettings['base_url'])
     http_proxy = FieldProperty(IWindowZSettings['http_proxy'])
-    dynamic_window = FieldProperty(IWindowZSettings['dynamic_window'])
 
-    # BBB methods from old Archetype content tool
-    def getPage_width(self):
-        return self.page_width
-
-    def getPage_height(self):
-        return self.page_height
-
-    def getBase_url(self):
-        return self.base_url
-
-    def getHttp_proxy(self):
-        return self.http_proxy
-
-    def getDynamic_window(self):
-        return self.dynamic_window
-
-    # setter
-    def setPage_width(self, value):
-        self.page_width = value
-
-    def setPage_height(self, value):
-        self.page_height = value
-
-    def setBase_url(self, value):
-        self.base_url = value
-
-    def setHttp_proxy(self, value):
-        self.http_proxy = value
-
-    def setDynamic_window(self, value):
-        self.dynamic_window = value
 
 InitializeClass(WindowZTool)

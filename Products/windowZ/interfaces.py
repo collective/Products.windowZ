@@ -28,7 +28,7 @@ __author__ = """Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>"""
 __docformat__ = 'plaintext'
 
 import zope.interface
-from zope.schema import TextLine, Bool
+from zope.schema import TextLine
 
 from Products.windowZ import WindowZMessageFactory as _
 
@@ -43,26 +43,20 @@ class IWindow(zope.interface.Interface):
         pass
 
     def getPageWidth():
-        """Returns page_width or the default value from portal_windowz.
+        """Returns page_width or the default value from the registry.
         """
         pass
 
     def getPageHeight():
-        """Returns page_height or the default value from portal_windowz.
+        """Returns page_height or the default value from the registry.
         """
         pass
 
     def getProxies():
-        """Returns the proxy configuration if it's provided by
-        portal_windowz tool.
+        """Returns the proxy configuration if it's provided by the registry.
         """
         pass
 
-class IWindowZTool(zope.interface.Interface):
-    """ Marker for windowZ tool """
-
-class IWindowZControlPanelForm(zope.interface.Interface):
-    """WindowZ Control Panel Form"""
 
 class IWindowZSettings(zope.interface.Interface):
     """ Default settings for windowZ content objects """
@@ -107,12 +101,4 @@ class IWindowZSettings(zope.interface.Interface):
                 "http://proxy_address:port or "
                 "http://username:password@proxy_address:port.")),
         required=False,
-        )
-
-    dynamic_window = Bool(
-        title=_('windowZ_label_dynamic_window',
-                default="Enable Dynamic Window"),
-        description=_('windowZ_help_dynamic_window', default=(
-                "Check this option if you want to use show_window template "
-                "to show sites provided via URL inside a window.")),
         )
