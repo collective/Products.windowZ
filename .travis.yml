@@ -8,7 +8,6 @@ cache:
 python:
   - 2.7.12
 env:
-  - PLONE_VERSION=4.3 QA=true
   - PLONE_VERSION=5.0
   - PLONE_VERSION=5.1
 before_install:
@@ -26,11 +25,11 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 install:
-  - sed -ie "s#plone-4.3.x.cfg#plone-$PLONE_VERSION.x.cfg#" travis.cfg
+  - sed -ie "s#plone-5.0.x.cfg#plone-$PLONE_VERSION.x.cfg#" travis.cfg
   - bin/python --version
   - bin/buildout -N -t 3 -c travis.cfg
 script:
-  - bin/code-analysis
+  #- bin/code-analysis
   - bin/test --all
 after_success:
   - bin/createcoverage
