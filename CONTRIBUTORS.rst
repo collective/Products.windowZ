@@ -43,4 +43,9 @@ Tom Gross - itconsense AT gmail.com
 * Plone 3 and 4 refactoring
 * German translations
 
+Thomas Lotze (tlotze), Maik Derstappen (MrTango)
+
+* Plone 5 reactoring
+* Test setup refactoring
+
 Many thanks!
