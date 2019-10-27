@@ -52,4 +52,3 @@ msgstr "Configuraciones del windowZ"
 
 msgid "windowZ Tool"
 msgstr "Herramienta del windowZ"
-

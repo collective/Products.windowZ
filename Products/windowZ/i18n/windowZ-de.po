@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: windowZ\n"
-"POT-Creation-Date: 2019-10-27 11:33+0000\n"
+"POT-Creation-Date: 2019-10-27 12:03+0000\n"
 "PO-Revision-Date: Wed Mar 15 18:09:08 2006\n"
 "Last-Translator: Robert Ming <robert.ming@fhnw.ch>\n"
 "Language-Team: Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>\n"

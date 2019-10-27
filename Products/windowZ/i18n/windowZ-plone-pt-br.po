@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: windowZ\n"
 "POT-Creation-Date: Mon Sep 11 17:44:34 2006\n"
 "PO-Revision-Date: Tus Jul 10 22:31:55 2007\n"
-"Last-Translator: Jean Rodrigo Ferri <jeanrodrigoferri@yahoo.com.br>\n"
+"Last-Translator: Ramiro Batista da Luz <ramiroluz@gmail.com>\n"
 "Language-Team: TcheZope.org <tchezope@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,4 +52,3 @@ msgstr "Configurações das Janelas"
 
 msgid "windowZ Tool"
 msgstr "Ferramenta de Configurações das Janelas"
-
