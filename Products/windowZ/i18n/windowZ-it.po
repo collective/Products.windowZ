@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: windowZ\n"
-"POT-Creation-Date: 2019-10-27 11:33+0000\n"
+"POT-Creation-Date: 2019-10-27 12:03+0000\n"
 "PO-Revision-Date: Wed Mar 15 01:22:34 2006\n"
 "Last-Translator: Vincenzo Tozzi <befree@nes.it>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"

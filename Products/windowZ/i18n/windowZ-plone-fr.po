@@ -53,4 +53,3 @@ msgstr "Paramètres de windowZ"
 
 msgid "windowZ Tool"
 msgstr "Paramètres de windowZ"
-
