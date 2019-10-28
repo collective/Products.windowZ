@@ -6,7 +6,7 @@ cache:
   directories:
     - $HOME/buildout-cache
 python:
-  - 2.7.12
+  - 2.7
 env:
   - PLONE_VERSION=5.0
   #- PLONE_VERSION=5.1
