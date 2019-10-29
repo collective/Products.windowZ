@@ -2,13 +2,11 @@
 Changelog
 =========
 
-2.0 (unreleased)
-================
 
-- Ported to Plone 5: removed WindowZTool and replaced it with registry.
+1.5.1 (unreleased)
 
-- Removed ``show_window`` feature which was apparently unused and didn't work
-  as advertised.
+- Update pt_BR translation
+  [ramiroluz]
 
 
 1.5 (2013-10-28)
@@ -36,13 +34,13 @@ Changelog
 
 * enhanced error catching in SearchableText-method
   [tom_gross]
-* prevent redirection to external link in navtree 
+* prevent redirection to external link in navtree
   [petschki]
 
 1.3 - 2012-03-30
 ================
 
-* remove workaround for Plone 2.5 which breaks with c.flowplayer 
+* remove workaround for Plone 2.5 which breaks with c.flowplayer
   in Plone 4.2b1 [tom_gross]
 * moved code to github.com.
   [tom_gross, malthe]
