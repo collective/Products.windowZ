@@ -3,7 +3,7 @@ Changelog
 =========
 
 
-1.5.1 (unreleased)
+1.5.1 (2019-10-29)
 
 - Update pt_BR translation
   [ramiroluz]
