@@ -3,6 +3,12 @@ Changelog
 =========
 
 
+1.5.2 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
 1.5.1 (2019-10-29)
 
 - Update pt_BR translation
