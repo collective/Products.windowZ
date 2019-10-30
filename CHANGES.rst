@@ -2,10 +2,11 @@
 Changelog
 =========
 
-2.1 (unreleased)
-================
+2.0.1 (unreleased)
+==================
 
-- Nothing changed yet.
+- Update pt_BR translation
+  [ramiroluz]
 
 
 2.0 (2017-11-07)

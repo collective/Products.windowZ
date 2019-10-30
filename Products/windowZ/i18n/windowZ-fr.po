@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: windowZ\n"
-"POT-Creation-Date: 2010-07-26 12:47+0000\n"
+"POT-Creation-Date: 2019-10-27 12:03+0000\n"
 "PO-Revision-Date: 2007-07-03 10:43+0200\n"
 "Last-Translator: Pierre-Yves Landuré <pierre-yves@landure.org>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -17,18 +17,34 @@ msgstr ""
 "Domain: windowZ\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
+#: ../configure.zcml:17
+msgid "Include iFrames as Plone content"
+msgstr ""
+
+#: ../controlpanel.py:13
+msgid "Settings for the WindowZ iFrame contents."
+msgstr ""
+
+#: ../controlpanel.py:12
+msgid "WindowZ Settings"
+msgstr ""
+
 #. Default: "This resource is not enabled in this portal."
 #: ../skins/windowZ/show_window.pt:15
 msgid "resource_not_enabled"
 msgstr ""
 
+#: ../configure.zcml:17
+msgid "windowZ"
+msgstr ""
+
 #. Default: "Base URL provided as prefix for Window relative URLs. It's used only if the option Use Base URL? is checked."
-#: ../WindowZTool.py:79
+#: ../interfaces.py:88
 msgid "windowZ_help_base_url"
 msgstr "URL de base utilisée comme préfixe des URL relative des Fenêtres. Elle est utilisée seulement si l'option \"URL de base\" est cochée."
 
 #. Default: "Check this option if you want to have the content of the provided page indexed in the site catalog and available in the portal search box."
-#: ../content/Window.py:105
+#: ../content/Window.py:107
 #, fuzzy
 msgid "windowZ_help_catalog_page_content"
 msgstr "Cochez cette option si vous souhaitez que le contenu de la page affichée dans la fenêtre soit indexée dans le catalogue du site, et donc disponible pour la recherche."
@@ -39,50 +55,50 @@ msgid "windowZ_help_dynamic_window"
 msgstr ""
 
 #. Default: "Check this option if you want to hide the page metadata, like title, description, print and send page icons, author, etc."
-#: ../content/Window.py:82
+#: ../content/Window.py:84
 #, fuzzy
 msgid "windowZ_help_hide_metadata"
 msgstr "Cochez cette option si vous souhaitez masquer les données Meta de la page, comme le titre, la description, les icones d'impression et d'envoi par mél, l'auteur, etc."
 
 #. Default: "If there is a proxy in front of the server you should enter the HTTP proxy address. It may seems like http://proxy_address:port or http://username:password@proxy_address:port."
-#: ../WindowZTool.py:89
+#: ../interfaces.py:98
 msgid "windowZ_help_http_proxy"
 msgstr "Si le serveur Zope doit passer par un serveur mandataire pour accéder à Internet, vous devriez saisir l'adresse du serveur mandataire (Par exemple: http://adresse_serveur_mandataire:port ou à http://utilisateur:mot_de_passe@adresse_serveur_mandataire:port)."
 
 #. Default: "Check this option if you want to inherit the URL-protocol for the iframe from the content URL "
-#: ../content/Window.py:127
+#: ../content/Window.py:129
 msgid "windowZ_help_inherit_protocol"
 msgstr ""
 
 #. Default: "Enter a value for the page height. If it's not provided the page height will assumes the default value defined in the site setup. You may use %, px, em, etc."
-#: ../content/Window.py:69
+#: ../content/Window.py:71
 msgid "windowZ_help_page_height"
 msgstr "Saisissez la valeur de la hauteur de la fenêtre. Si elle n'est pas fournie, la hauteur utilisée sera celle définie dans les paramètres globaux du site. Vous pouvez exprimer cette valeur en %, px, em, etc."
 
 #. Default: "Enter a value for the page width. If it's not provided the page width will assumes the default value defined in the site setup. You may use %, px, em, etc."
-#: ../content/Window.py:57
+#: ../content/Window.py:59
 msgid "windowZ_help_page_width"
 msgstr "Saisissez la valeur de la largeur de la fenêtre. Si elle n'est pas fournie, la largeur utilisée sera celle définie dans les paramètres globaux du site. Vous pouvez exprimer cette valeur en %, px, em, etc."
 
 #. Default: "Check this option if you want to show the provided link as a reference in the bottom of the page."
-#: ../content/Window.py:117
+#: ../content/Window.py:119
 #, fuzzy
 msgid "windowZ_help_show_reference"
 msgstr "Cochez cette option si vous souhaitez afficher l'URL fournie comme référence en bas de la page."
 
 #. Default: "Check this option if you want to use the base URL defined in the site setup as a prefix to the provided link."
-#: ../content/Window.py:93
+#: ../content/Window.py:95
 #, fuzzy
 msgid "windowZ_help_use_base_url"
 msgstr "Cochez cette option si vous souhaitez utiliser l'URL de base définie dans les paramètres globaux du site comme préfixe au lien fourni."
 
 #. Default: "Base URL"
-#: ../WindowZTool.py:78
+#: ../interfaces.py:87
 msgid "windowZ_label_base_url"
 msgstr "URL de base"
 
 #. Default: "Catalog Page Content?"
-#: ../content/Window.py:103
+#: ../content/Window.py:105
 msgid "windowZ_label_catalog_page_content"
 msgstr "Indexer le contenu de la fenêtre ?"
 
@@ -92,57 +108,56 @@ msgid "windowZ_label_dynamic_window"
 msgstr ""
 
 #. Default: "Hide Metadata?"
-#: ../content/Window.py:81
+#: ../content/Window.py:83
 msgid "windowZ_label_hide_metadata"
 msgstr "Masquer les données Meta ?"
 
 #. Default: "HTTP Proxy"
-#: ../WindowZTool.py:88
+#: ../interfaces.py:97
 msgid "windowZ_label_http_proxy"
 msgstr "Serveur mandataire"
 
 #. Default: "Inherit Protocol?"
-#: ../content/Window.py:126
+#: ../content/Window.py:128
 msgid "windowZ_label_inherit_protocol"
 msgstr ""
 
 #. Default: "Page Height"
-#: ../content/Window.py:68
+#: ../content/Window.py:70
 msgid "windowZ_label_page_height"
 msgstr "Hauteur de la fenêtre"
 
 #. Default: "Page Width"
-#: ../content/Window.py:56
+#: ../content/Window.py:58
 msgid "windowZ_label_page_width"
 msgstr "Largeur de la fenêtre"
 
 #. Default: "Show Reference?"
-#: ../content/Window.py:115
+#: ../content/Window.py:117
 msgid "windowZ_label_show_reference"
 msgstr "Afficher la référence ?"
 
 #. Default: "Use Base URL?"
-#: ../content/Window.py:92
+#: ../content/Window.py:94
 msgid "windowZ_label_use_base_url"
 msgstr "Utiliser l'URL de base"
 
 #. Default: "Height of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
-#: ../WindowZTool.py:65
+#: ../interfaces.py:78
 msgid "windowZ_tool_help_page_height"
 msgstr "Hauteur de l'iFrame. Il s'agit de la valeur par défaut pour les contenus de type Fenêtre. Elle peut être redéfinie individuellement pour chaque Fenêtre. Vous pouvez utiliser %, px, em, etc."
 
 #. Default: "Width of the iFrame area. This is the default value for the Window content types and may be redefined individually for each Window content. You may use %, px, em, etc."
-#: ../WindowZTool.py:50
+#: ../interfaces.py:67
 msgid "windowZ_tool_help_page_width"
 msgstr "Largeur de l'iFrame. Il s'agit de la valeur par défaut pour les contenus de type Fenêtre. Elle peut être redéfinie individuellement pour chaque Fenêtre. Vous pouvez exprimer cette valeur en %, px, em, etc."
 
 #. Default: "Default Page Height"
-#: ../WindowZTool.py:63
+#: ../interfaces.py:76
 msgid "windowZ_tool_label_page_height"
 msgstr "Hauteur par défaut de la fenêtre"
 
 #. Default: "Default Page Width"
-#: ../WindowZTool.py:48
+#: ../interfaces.py:65
 msgid "windowZ_tool_label_page_width"
 msgstr "Largeur par défaut de la fenêtre"
-
