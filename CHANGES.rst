@@ -2,7 +2,7 @@
 Changelog
 =========
 
-2.0.1 (unreleased)
+2.0.1 (2019-10-30)
 ==================
 
 - Update pt_BR translation
