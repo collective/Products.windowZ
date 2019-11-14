@@ -1,8 +1,4 @@
 <?xml version="1.0"?>
 <metadata>
   <version>2000</version>
-  <dependencies>
-    <dependency>profile-Products.Archetypes:Archetypes</dependency>
-    <dependency>profile-Products.ATContentTypes:base</dependency>
-  </dependencies>
 </metadata>
