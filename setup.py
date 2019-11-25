@@ -41,6 +41,7 @@ setup(name='Products.windowZ',
       install_requires=[
           'plone.app.registry',
           'plone.z3cform',
+          'plone.api',
           'Products.Archetypes',
           'Products.ATContentTypes',
           'Products.CMFCore',

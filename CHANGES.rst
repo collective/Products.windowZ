@@ -6,10 +6,12 @@ Changelog
 1.5.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added plone.api dependency, removed profile dependencies which were
+  added for plone 5.
 
 
 1.5.1 (2019-10-29)
+------------------
 
 - Update pt_BR translation
   [ramiroluz]
